@@ -1,4 +1,4 @@
-# 🧠 Customer Personality Analysis  
+# Customer Personality Analysis  
 ![Project Status](https://img.shields.io/badge/Project%20Status-Ongoing-orange)
 
 ## 📌 Overview  
