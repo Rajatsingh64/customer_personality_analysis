@@ -6,3 +6,4 @@ Customer Personality Analysis helps businesses understand customer behavior, seg
 
 ## 🔄 Ongoing EDA & Feature Engineering  
 [![Ongoing EDA & FE](https://img.shields.io/badge/Ongoing-EDA%20%26%20FE-blue)](notebook/EDA.ipynb)
+[![Interactive Button](https://img.shields.io/badge/Explore%20EDA%20Interactive-brightgreen)](notebook/interactive_EDA.ipynb)
