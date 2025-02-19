@@ -5,5 +5,8 @@
 Customer Personality Analysis helps businesses understand customer behavior, segment users, and provide personalized recommendations. This project utilizes **Machine Learning Operations (MLOps)** to streamline model training, deployment, and monitoring.
 
 ## 🔄 Ongoing EDA & Feature Engineering  
-[![Ongoing EDA & FE](https://img.shields.io/badge/Ongoing-EDA%20%26%20FE-blue)](notebook/EDA.ipynb)
-[![Interactive Button](https://img.shields.io/badge/Explore%20EDA%20Interactive-brightgreen)](notebook/EDA.ipynb)
+[![Ongoing EDA & FE](https://img.shields.io/badge/Ongoing-EDA%20%26%20FE-blue)](Notebook/EDA & Feature_Engineering.ipynb)
+[![Ongoing Preprocessing & Model Training](https://img.shields.io/badge/Ongoing-EDA%20%26%20FE-blue)](Notebook/Preprocessing & Model_training.ipynb)
+
+## 🔄 Ongoing MLops Training Pipeline
+[![Ongoing Training Pipeline](https://img.shields.io/badge/Ongoing-EDA%20%26%20FE-blue)](src/components/)
