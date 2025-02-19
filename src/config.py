@@ -1,8 +1,10 @@
 from dotenv import load_dotenv
 from dataclasses import dataclass
+from src.logger import logging
 import pymongo as pm
 import os ,sys
 
+logging.info(f"loading .env file")
 print(f"\nloading .env file")
 load_dotenv()
 
@@ -18,3 +20,5 @@ env=EnvironmentVariables()
 
 mongo_client=pm.MongoClient(env.mongo_url)
 print(f"Connected to MongoDB database")
+logging.info(f"Connected to MongoDB database")
+date_column='Dt_Customer'

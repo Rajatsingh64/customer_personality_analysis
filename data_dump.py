@@ -1,5 +1,5 @@
 # Import necessary libraries
-from config import mongo_client
+from src.config import mongo_client
 import pandas as pd
 
 # Constants

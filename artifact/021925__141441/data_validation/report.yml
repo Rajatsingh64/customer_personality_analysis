@@ -1,0 +1,197 @@
+data_drift_within_test_dataset:
+  AcceptedCmp1:
+    pvalues: 1.0
+    same_distribution: true
+  AcceptedCmp2:
+    pvalues: 1.0
+    same_distribution: true
+  AcceptedCmp3:
+    pvalues: 1.0
+    same_distribution: true
+  AcceptedCmp4:
+    pvalues: 0.9999999999999969
+    same_distribution: true
+  AcceptedCmp5:
+    pvalues: 1.0
+    same_distribution: true
+  Complain:
+    pvalues: 1.0
+    same_distribution: true
+  Dt_Customer_day:
+    pvalues: 0.05896686949673305
+    same_distribution: true
+  Dt_Customer_month:
+    pvalues: 0.9999929002847916
+    same_distribution: true
+  Dt_Customer_weekday:
+    pvalues: 0.9640809309377341
+    same_distribution: true
+  Dt_Customer_year:
+    pvalues: 0.9719701054885065
+    same_distribution: true
+  Education:
+    pvalues: 0.6111862188226594
+    same_distribution: true
+  ID:
+    pvalues: 0.9935329725219725
+    same_distribution: true
+  Income:
+    pvalues: 0.9967406649631354
+    same_distribution: true
+  Kidhome:
+    pvalues: 0.9985374762907108
+    same_distribution: true
+  Marital_Status:
+    pvalues: 0.7511326329808798
+    same_distribution: true
+  MntFishProducts:
+    pvalues: 0.7426198230026331
+    same_distribution: true
+  MntFruits:
+    pvalues: 0.8221517397439452
+    same_distribution: true
+  MntGoldProds:
+    pvalues: 0.6895707478956703
+    same_distribution: true
+  MntMeatProducts:
+    pvalues: 0.6585663144612622
+    same_distribution: true
+  MntSweetProducts:
+    pvalues: 0.9997330420884859
+    same_distribution: true
+  MntWines:
+    pvalues: 0.3827170201310171
+    same_distribution: true
+  NumCatalogPurchases:
+    pvalues: 0.8021319517096412
+    same_distribution: true
+  NumDealsPurchases:
+    pvalues: 0.9999994387291432
+    same_distribution: true
+  NumStorePurchases:
+    pvalues: 0.973224676153688
+    same_distribution: true
+  NumWebPurchases:
+    pvalues: 0.8741200428800706
+    same_distribution: true
+  NumWebVisitsMonth:
+    pvalues: 0.8853444045633061
+    same_distribution: true
+  Recency:
+    pvalues: 0.19692651329337252
+    same_distribution: true
+  Response:
+    pvalues: 1.0
+    same_distribution: true
+  Teenhome:
+    pvalues: 1.0
+    same_distribution: true
+  Year_Birth:
+    pvalues: 0.9978519923342901
+    same_distribution: true
+  Z_CostContact:
+    pvalues: 1.0
+    same_distribution: true
+  Z_Revenue:
+    pvalues: 1.0
+    same_distribution: true
+data_drift_within_train_dataset:
+  AcceptedCmp1:
+    pvalues: 1.0
+    same_distribution: true
+  AcceptedCmp2:
+    pvalues: 1.0
+    same_distribution: true
+  AcceptedCmp3:
+    pvalues: 1.0
+    same_distribution: true
+  AcceptedCmp4:
+    pvalues: 1.0
+    same_distribution: true
+  AcceptedCmp5:
+    pvalues: 1.0
+    same_distribution: true
+  Complain:
+    pvalues: 1.0
+    same_distribution: true
+  Dt_Customer_day:
+    pvalues: 0.6068190273572702
+    same_distribution: true
+  Dt_Customer_month:
+    pvalues: 1.0
+    same_distribution: true
+  Dt_Customer_weekday:
+    pvalues: 0.9999969217908259
+    same_distribution: true
+  Dt_Customer_year:
+    pvalues: 0.9999986110014119
+    same_distribution: true
+  Education:
+    pvalues: 0.10063960221447273
+    same_distribution: true
+  ID:
+    pvalues: 0.9999999865958722
+    same_distribution: true
+  Income:
+    pvalues: 0.9999999984177601
+    same_distribution: true
+  Kidhome:
+    pvalues: 0.9999999998680793
+    same_distribution: true
+  Marital_Status:
+    pvalues: 0.3730264234944638
+    same_distribution: true
+  MntFishProducts:
+    pvalues: 0.997922069853108
+    same_distribution: true
+  MntFruits:
+    pvalues: 0.9994141088948991
+    same_distribution: true
+  MntGoldProds:
+    pvalues: 0.9959911519146848
+    same_distribution: true
+  MntMeatProducts:
+    pvalues: 0.9943836068659008
+    same_distribution: true
+  MntSweetProducts:
+    pvalues: 0.9999999999993061
+    same_distribution: true
+  MntWines:
+    pvalues: 0.948433185178217
+    same_distribution: true
+  NumCatalogPurchases:
+    pvalues: 0.9991578168053692
+    same_distribution: true
+  NumDealsPurchases:
+    pvalues: 1.0
+    same_distribution: true
+  NumStorePurchases:
+    pvalues: 0.9999988051960839
+    same_distribution: true
+  NumWebPurchases:
+    pvalues: 0.9998161971304027
+    same_distribution: true
+  NumWebVisitsMonth:
+    pvalues: 0.9998651563739978
+    same_distribution: true
+  Recency:
+    pvalues: 0.8390649622176247
+    same_distribution: true
+  Response:
+    pvalues: 1.0
+    same_distribution: true
+  Teenhome:
+    pvalues: 1.0
+    same_distribution: true
+  Year_Birth:
+    pvalues: 0.9999999995704529
+    same_distribution: true
+  Z_CostContact:
+    pvalues: 1.0
+    same_distribution: true
+  Z_Revenue:
+    pvalues: 1.0
+    same_distribution: true
+missing_values_within_base_dataset: []
+missing_values_within_test_dataset: []
+missing_values_within_train_dataset: []
