@@ -22,9 +22,8 @@ def run_training_pipeline():
     Runs the entire training pipeline, starting with data ingestion.
     """
     try:  
+       
         logging.info(f"{'>'*20} Running Training Pipeline {'<'*20}")
-        print(f"{'>'*20} Running Training Pipeline {'<'*20}")
-        
         # Initialize Training Pipeline Configuration
         training_pipeline_config = TrainingPipelineConfig() 
         
@@ -96,6 +95,6 @@ def run_training_pipeline():
         model_pusher_artifact=model_pusher.initiate_model_pusher()
         logging.info("Model Pusher Completed Successfully.")
         print("Model Pusher Completed Successfully.")
-    
+        logging.info(f"{'>'*20} Training Pipeline Completed Successfully {'<'*20}")
     except Exception as e:
         raise SrcException(e, sys)

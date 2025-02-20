@@ -26,7 +26,7 @@ class ModelPusher:
             model_trainer_artifact (ModelTrainingArtifact): Artifact produced from model training.
         """
         try:
-            logging.info(f"{'>>'*20} Initializing Model Pusher {'<<'*20}")
+            logging.info(f"{'>'*20} Initializing Model Pusher {'<'*20}")
             self.model_pusher_config = model_pusher_config
             self.data_transformation_artifact = data_transformation_artifact
             self.model_trainer_artifact = model_trainer_artifact

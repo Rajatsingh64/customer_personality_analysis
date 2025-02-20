@@ -30,7 +30,7 @@ class ModelTrainer:
                  data_ingestion_artifact: DataIngestionArtifact , 
                  data_transformation_artifact:DataTransformationArtifact):
         try:
-            logging.info(f'{"="*20} Model Trainer {"="*20}')
+            logging.info(f'{">"*20} Model Trainer {"<"*20}')
             self.model_trainer_config = model_trainer_config
             self.data_ingestion_artifact = data_ingestion_artifact
             self.data_transformation_artifact = data_transformation_artifact
@@ -74,8 +74,7 @@ class ModelTrainer:
             return best_model  # Return the best-tuned model
 
         except Exception as e:
-            logging.error(f"Error in tune_model: {e}")
-            return None
+            raise SrcException(e,sys)
     
     def silhouette_scorer(self, X):
         """

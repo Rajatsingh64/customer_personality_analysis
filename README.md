@@ -12,4 +12,4 @@ Customer Personality Analysis helps businesses understand customer behavior, seg
 [![Completed Training Pipeline](https://img.shields.io/badge/Completed-Training%20Pipeline-green)](src/pipeline/training_pipeline.py)
 
 ## 🔄 Ongoing Cluster Pipeline  
-[![Ongoing Cluster Pipeline](https://img.shields.io/badge/Ongoing-Cluster%20Pipeline-orange)](src/pipeline/cluster_prediction_pipeline.py)
+[![Completed Cluster Pipeline](https://img.shields.io/badge/Ongoing-Cluster%20Pipeline-green)](src/pipeline/cluster_prediction_pipeline.py)

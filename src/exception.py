@@ -25,9 +25,7 @@ class SrcException(Exception):
         """
         self.error_message = error_message_detail(error_message, error_detail=error_detail)
 
-        # Log the error message (you can customize the logging level and format as needed)
-        logging.error(f"SrcException: {self.error_message}")
-
+        
     def __str__(self):
         """
         Return the error message string when the exception is raised.
