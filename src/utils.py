@@ -3,6 +3,7 @@ import matplotlib.cm as cm
 import matplotlib.pyplot as plt
 from src.logger import logging
 from src.exception import SrcException
+import dill
 import yaml
 import numpy as np
 import pandas as pd
@@ -11,6 +12,8 @@ from sklearn.metrics import silhouette_samples, silhouette_score
 import os ,sys
 
 
+
+#for data ingestion
 def get_collection_as_dataframe(mongo_client, database_name, collection_name):
     """
     This function extracts data from a MongoDB collection and returns it as a pandas DataFrame.
@@ -40,7 +43,10 @@ def get_collection_as_dataframe(mongo_client, database_name, collection_name):
     except Exception as e:
         print(f"Error: {e}")  # Print the exception if anything goes wrong
         return pd.DataFrame()  # Return an empty DataFrame in case of an error
-     
+
+
+#for data validation 
+
 def write_yaml_file(file_path,data:dict):
     try:
         file_dir = os.path.dirname(file_path)
@@ -65,6 +71,67 @@ def convert_columns_float(df: pd.DataFrame) -> pd.DataFrame:
         return df
     except Exception as e:
         raise e
+
+def outliers_threshold( df: pd.DataFrame, numerical_features: list) -> pd.DataFrame:
+    """
+    Handle outliers in numerical features using the IQR method.
+
+    Parameters:
+    df (pd.DataFrame): Input DataFrame.
+    numerical_features (list): List of numerical feature names.
+
+    Returns:
+     pd.DataFrame: DataFrame with outliers handled.
+    """
+    try:
+        for feature in numerical_features:
+            Q1, Q3 = df[feature].quantile([0.25, 0.75])
+            IQR = Q3 - Q1
+            lower, upper = Q1 - 1.5 * IQR, Q3 + 1.5 * IQR
+            df[feature] = np.clip(df[feature], lower, upper)
+        return df
+    except Exception as e:
+         raise SrcException(e, sys)
+
+def handling_outliers(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Identify numerical features and apply outlier handling.
+
+    Parameters:
+    df (pd.DataFrame): Input DataFrame.
+
+    Returns:
+    pd.DataFrame: DataFrame with outliers handled.
+    """
+    try:
+        numerical_features = df.select_dtypes(include=[np.number]).columns.tolist()
+        return outliers_threshold(df, numerical_features)
+    except Exception as e:
+        raise SrcException(e, sys)
+
+def handle_num_correlations( df: pd.DataFrame, threshold: float = 0.8) -> pd.DataFrame:
+    """
+    Remove numerical features with high correlations beyond the specified threshold.
+
+    This is part of the transformation process in an MLOps pipeline.
+
+    Parameters:
+    df (pd.DataFrame): Input DataFrame.
+    threshold (float): Correlation threshold for dropping features (default is 0.9).
+
+    Returns:
+    d.DataFrame: DataFrame with highly correlated numerical features removed.
+    """
+    try:
+        numeric_cols = df.select_dtypes(include=[np.number]).columns
+        corr_matrix = df[numeric_cols].corr().abs()
+        # Only consider the upper triangle of the correlation matrix
+        upper = corr_matrix.where(np.triu(np.ones(corr_matrix.shape), k=1).astype(bool))
+        drop_cols = [col for col in upper.columns if (upper[col] > threshold).any()]
+        logging.info(f"Dropping numeric columns due to high correlation: {drop_cols}")
+        return df.drop(columns=drop_cols)
+    except Exception as e:
+        raise SrcException(e, sys)
 
 
 def silhouette_analysis(df, model="kmeans", cluster_range=[2, 3, 4, 5, 6], random_state=10):
@@ -160,3 +227,51 @@ def silhouette_analysis(df, model="kmeans", cluster_range=[2, 3, 4, 5, 6], rando
     return cluster_results  # Return dictionary of cluster labels
 
 
+def save_object(file_path:str , obj:object)->None:
+    try:
+        logging.info(f"Entered the Save_Object method of utils")
+        os.makedirs(os.path.dirname(file_path) , exist_ok=True)
+        with open(file_path , "wb") as file_obj:
+            dill.dump(obj , file_obj)
+        logging.info(f"Exited the Save Object of utils")  
+    except Exception as e:
+        raise SrcException(e,sys)      
+    
+
+def load_object(file_path:str , )-> object:
+    try:
+        if not os.path.exists(file_path):
+            raise Exception(f" The file {file_path} not exists")
+        with open(file_path , "rb") as file_obj:
+            return dill.load(file_obj)
+    except Exception as e:
+        raise e   
+    
+def save_numpy_array_data(file_path:str , array:np.array):
+
+    """  
+    Save numpy array data to file
+    file_path :str location of file to save
+    array: np.array data to save
+    """
+    try:
+        dir_path=os.path.dirname(file_path)
+        os.makedirs(dir_path, exist_ok=True)
+        with open(file_path , "wb") as file_obj:
+            np.save(file_obj , array)
+    except Exception as e:
+        raise e
+    
+
+
+def load_numpy_array_data(file_path:str) -> np.array:
+    """
+    load nump array data from file
+    file_path :str location of file to load
+    return: np.array data load
+    """
+    try:
+        with open(file_path , "rb")as file_obj:
+            return np.load(file_obj)
+    except Exception as e:
+        raise   SrcException(e,sys) 

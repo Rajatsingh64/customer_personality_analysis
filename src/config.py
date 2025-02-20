@@ -21,4 +21,8 @@ env=EnvironmentVariables()
 mongo_client=pm.MongoClient(env.mongo_url)
 print(f"Connected to MongoDB database")
 logging.info(f"Connected to MongoDB database")
-date_column='Dt_Customer'
+
+features_to_drop=["ID" , "Year_Birth" ,'Dt_Customer',
+                  'year_enroll','AcceptedCmp5','AcceptedCmp3',
+                  'AcceptedCmp4','AcceptedCmp1' ,'AcceptedCmp2' ,
+                  'Z_CostContact','Complain' , 'Z_Revenue' ,'Response' ]

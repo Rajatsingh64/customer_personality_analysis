@@ -44,3 +44,42 @@ class DataValidationConfig:
         self.report_file_path =os.path.join(self.data_validation_dir , "report.yml")
         self.missing_threshold=0.3 
         self.base_dataset_file_path=os.path.join(os.getcwd(), "dataset/customer.csv")
+
+
+class DataTransformationConfig:
+
+    def __init__(self, training_pipeline_config: TrainingPipelineConfig):
+
+        self.data_transformation_dir=os.path.join(training_pipeline_config.artifact_directory , "data_transformation")
+        self.transformer_object_file_path=os.path.join(self.data_transformation_dir , "transformer.pkl")
+        self.transformed_train_file_path=os.path.join(self.data_transformation_dir , "transformed" , "train.npz")
+        self.transformed_test_file_path=os.path.join(self.data_transformation_dir , "transformed" , "test.npz")
+        self.correlation_threshold=0.8
+
+
+class ModelTrainingConfig:
+    
+    def __init__(self, training_pipeline_config: TrainingPipelineConfig):
+
+        self.model_directory=os.path.join(training_pipeline_config.artifact_directory , "mode_training")
+        self.model_object_file_path=os.path.join(self.model_directory , "model.pkl")
+        self.expected_silhouette_score=0.5
+        self.overfitting_threshold=0.1
+
+class ModelEvaluationConfig:
+
+    def __init__(self ,training_pipeline_config:TrainingPipelineConfig ):
+             self.change_threshold = 0.1
+    
+class ModelPusherConfig:
+
+    def __init__(self,training_pipeline_config:TrainingPipelineConfig):
+        self.model_pusher_dir = os.path.join(training_pipeline_config.artifact_directory, "model_pusher")
+        self.saved_model_dir = os.path.join("saved_models")
+        self.pusher_model_dir = os.path.join(self.model_pusher_dir,"saved_models")
+        self.pusher_model_path = os.path.join(self.pusher_model_dir,"model.pkl")
+        self.pusher_transformer_path = os.path.join(self.pusher_model_dir,"transformer.pkl")
+        
+
+
+

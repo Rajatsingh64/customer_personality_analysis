@@ -7,7 +7,6 @@ from src.entity.artifact_entity import DataIngestionArtifact, DataValidationArti
 from src.exception import SrcException
 from typing import Optional
 from src.utils import write_yaml_file, convert_columns_float
-from src.config import date_column
 import numpy as np
 import os, sys
 

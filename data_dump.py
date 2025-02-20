@@ -3,11 +3,11 @@ from src.config import mongo_client
 import pandas as pd
 
 # Constants
-FILE_URL = "https://raw.githubusercontent.com/amankharwal/Website-data/master/marketing_campaign.csv"
+FILE_PATH = "Notebook/cleaned_customer.csv"
 DATABASE_NAME = "customer"
 COLLECTION_NAME = "records"
 
-def data_dump_mongo_db(mongo_client, data_path, dataset_sep=None):
+def data_dump_mongo_db(mongo_client, data_path):
     """
     Function: data_dump_mongo_db
 
@@ -30,7 +30,7 @@ def data_dump_mongo_db(mongo_client, data_path, dataset_sep=None):
     """
     try:
         # Load the dataset
-        df = pd.read_csv(data_path, sep=dataset_sep)
+        df = pd.read_csv(data_path)
         
         # Drop missing values
         df.dropna(inplace=True)
@@ -49,6 +49,6 @@ def data_dump_mongo_db(mongo_client, data_path, dataset_sep=None):
 # Main execution
 if __name__ == "__main__":
     try:
-        data_dump_mongo_db(mongo_client=mongo_client, data_path=FILE_URL ,dataset_sep=";")
+        data_dump_mongo_db(mongo_client=mongo_client, data_path=FILE_PATH )
     except Exception as e:
         print(f"❌ Error: {e}")
