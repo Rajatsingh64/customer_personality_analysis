@@ -3,7 +3,7 @@ from src.exception import SrcException
 from src.predictor import ModelResolver
 from src.logger import logging
 from src.entity import artifact_entity
-from src.config import features_to_drop
+from src.config import features_to_drop , outliers_handling_features
 import os, sys
 from src import utils
 import pandas as pd
@@ -79,7 +79,7 @@ class ModelEvaluation:
 
             # Handle outliers to stabilize the dataset and improve model performance.
             logging.info("Handling outliers in the test dataset during model evaluation")
-            test_df = utils.handling_outliers(test_df)
+            test_df[outliers_handling_features] = utils.handling_outliers(test_df[outliers_handling_features])
 
             # Address high numerical correlations to reduce multicollinearity issues.
             test_df = utils.handle_num_correlations(test_df)

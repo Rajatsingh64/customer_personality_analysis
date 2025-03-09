@@ -4,11 +4,14 @@ from src.predictor import ModelResolver
 import pandas as pd
 import numpy as np
 from src.utils import load_object, handle_num_correlations, handling_outliers
+from src.config import outliers_handling_features
 import os, sys
 from datetime import datetime
 from src.config import features_to_drop
+import warnings 
+warnings.filterwarnings("ignore")
 
-PREDICTION_DIR = "Prediction"
+Final_Output_DIR = "clustered dataset"
 
 
 def start_Cluster_prediction(input_file_path: str) -> str:
@@ -30,7 +33,7 @@ def start_Cluster_prediction(input_file_path: str) -> str:
     """
     try:
         logging.info(f"{'>'*20} Starting Cluster Prediction {'<'*20}")
-        os.makedirs(PREDICTION_DIR, exist_ok=True)
+        os.makedirs(Final_Output_DIR, exist_ok=True)
 
         logging.info("Creating ModelResolver object")
         model_resolver = ModelResolver(model_registry="saved_models")
@@ -44,7 +47,7 @@ def start_Cluster_prediction(input_file_path: str) -> str:
 
         # Handle outliers and reduce high numerical correlations
         logging.info("Processing data: handling outliers and numerical correlations")
-        df = handling_outliers(df=df)
+        df[outliers_handling_features] = handling_outliers(df=df[outliers_handling_features])
         df = handle_num_correlations(df=df)
 
         # Load the transformer used during model training
@@ -69,26 +72,27 @@ def start_Cluster_prediction(input_file_path: str) -> str:
             axis=1
         )
 
-        # Load the best saved model for prediction
-        logging.info("Loading the best model for prediction")
+        # Load the best saved model for Clustering
+        logging.info("Loading the best model for Clustering")
         model = load_object(file_path=model_resolver.get_latest_model_path())
 
         # Predict cluster labels using the loaded model
         cluster_labels = model.predict(input_encoded_df)
         df["Cluster"] = cluster_labels
+        df["Cluster_Category"]= df["Cluster"].replace(to_replace={0 : "Moderate Spender" , 1:"Low Spender" , 2: "High Spender"})
 
-        # Generate a unique filename for the predictions file using the current datetime
-        prediction_file_name = os.path.basename(input_file_path).replace(
+        # Generate a unique filename for the Clustering file using the current datetime
+        clustering_file_name = os.path.basename("clustered_customer.csv").replace(
             ".csv", f"_{datetime.now().strftime('%m%d%Y__%H%M%S')}.csv"
         )
-        prediction_file_path = os.path.join(PREDICTION_DIR, prediction_file_name)
+        clustering_file_path = os.path.join(Final_Output_DIR, clustering_file_name)
 
-        # Save the predictions to a CSV file
-        df.to_csv(prediction_file_path, index=False, header=True)
-        logging.info(f"{'>'*20} Cluster Prediction Completed Successfully {'<'*20}")
-        print(f'Prediction file >>>>>>>>>>>> {prediction_file_name}')
+        # Save the Clustered data to a CSV file
+        df.to_csv(clustering_file_path, index=False, header=True)
+        logging.info(f"{'>'*20} Clustering Completed Successfully {'<'*20}")
+        print(f'Clustered file >>>>>>>>>>>> {clustering_file_name}')
         
-        return prediction_file_path
+        return clustering_file_path
 
     except Exception as e:
         raise SrcException(e, sys)

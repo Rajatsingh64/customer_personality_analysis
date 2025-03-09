@@ -5,7 +5,7 @@ from src.logger import logging
 from src.exception import SrcException
 
 # File names used in the project
-file_name = "Notebook/cleaned_customer.csv"
+file_name = "dataset/cleaned_customer.csv"
 train_file_name = "train.csv"
 test_file_name = "test.csv"
 transformer_object_file_name = "transformer.pkl"

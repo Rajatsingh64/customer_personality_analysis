@@ -12,7 +12,7 @@ from src.entity.config_entity import DataValidationConfig, DataTransformationCon
 from src.entity.artifact_entity import DataIngestionArtifact, DataTransformationArtifact
 from src.exception import SrcException
 from src.logger import logging
-from src.config import features_to_drop
+from src.config import features_to_drop , outliers_handling_features
 from src.utils import save_object, load_object, save_numpy_array_data , outliers_threshold , handling_outliers , handle_num_correlations
 from src import utils
 import warnings 
@@ -60,8 +60,8 @@ class DataTransformation:
             
             logging.info("Handling outliers if available")
             # Handle outliers
-            train_df = handling_outliers(train_df)
-            test_df = handling_outliers(test_df)
+            train_df[outliers_handling_features] = handling_outliers(train_df[outliers_handling_features])
+            test_df[outliers_handling_features] = handling_outliers(test_df[outliers_handling_features])
 
             logging.info(f"Removing High Correlated Features from training data")
             # Remove highly correlated numerical features

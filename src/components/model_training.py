@@ -106,6 +106,10 @@ class ModelTrainer:
             if best_model is None:
                 raise Exception("No suitable model was found during tuning. Please check the input data or parameters.")
             
+            #manually increasing cluster 
+            best_model=KMeans(n_clusters=3 , init="k-means++" , n_init=10 , random_state=42 , max_iter=300 , algorithm="lloyd")
+            best_model.fit(train_array)
+            
             train_labels = best_model.predict(train_array)
             logging.info(f"Calculating train silhouette_score")
             train_silhouette_score = silhouette_score(train_array, train_labels)

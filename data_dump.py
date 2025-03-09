@@ -3,7 +3,7 @@ from src.config import mongo_client
 import pandas as pd
 
 # Constants
-FILE_PATH = "Notebook/cleaned_customer.csv"
+FILE_PATH = "dataset/cleaned_customer.csv"
 DATABASE_NAME = "customer"
 COLLECTION_NAME = "records"
 

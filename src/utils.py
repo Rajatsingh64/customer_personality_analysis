@@ -10,7 +10,8 @@ import pandas as pd
 from sklearn.cluster import KMeans, AgglomerativeClustering, DBSCAN
 from sklearn.metrics import silhouette_samples, silhouette_score
 import os ,sys
-
+import warnings
+warnings.filterwarnings("ignore")
 
 
 #for data ingestion
@@ -127,8 +128,10 @@ def handle_num_correlations( df: pd.DataFrame, threshold: float = 0.8) -> pd.Dat
         corr_matrix = df[numeric_cols].corr().abs()
         # Only consider the upper triangle of the correlation matrix
         upper = corr_matrix.where(np.triu(np.ones(corr_matrix.shape), k=1).astype(bool))
+        #print(f"Columns: {df.columns}")
         drop_cols = [col for col in upper.columns if (upper[col] > threshold).any()]
         logging.info(f"Dropping numeric columns due to high correlation: {drop_cols}")
+        #print(f"Columns to drop {drop_cols}")
         return df.drop(columns=drop_cols)
     except Exception as e:
         raise SrcException(e, sys)

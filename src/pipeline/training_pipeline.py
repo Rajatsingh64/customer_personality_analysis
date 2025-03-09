@@ -15,6 +15,8 @@ from src.logger import logging
 from src.exception import SrcException
 import os
 import sys
+import warnings 
+warnings.filterwarnings("ignore")
 
 
 def run_training_pipeline():      
