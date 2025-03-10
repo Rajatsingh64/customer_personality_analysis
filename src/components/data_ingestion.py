@@ -15,7 +15,7 @@ class DataIngestion:
 
     def __init__(self, data_ingestion_config: DataIngestionConfig):
         try:
-            logging.info(f"{">"*20} Data Ingestion {"<"*20}")  # Log process start
+            logging.info(f'{">"*20} Data Ingestion {"<"*20}')  # Log process start
             self.data_ingestion_config = data_ingestion_config  # Configuration settings
         except Exception as e:
             raise SrcException(e, sys)  # Handle exceptions
