@@ -12,4 +12,4 @@ RUN airflow users create  -e rajat.k.singh64@gmail.com -f Rajat -l Singh -p admi
 RUN chmod 777 start.sh
 RUN apt update -y && apt install awscli -y
 ENTRYPOINT [ "/bin/sh" ]
-CMD ["start.sh"]
+CMD ["start.sh"] 
