@@ -20,12 +20,7 @@ with DAG(
         run_training_pipeline()
 
     def sync_artifact_to_s3_bucket(**kwargs):
-        """Syncs artifact and model files to S3 bucket"""
         bucket_name = os.getenv("BUCKET_NAME")
-        
-        if not bucket_name:
-            raise ValueError("Environment variable 'BUCKET_NAME' is not set!")
-
         os.system(f"aws s3 sync /app/artifact s3://{bucket_name}/artifacts")
         os.system(f"aws s3 sync /app/saved_models s3://{bucket_name}/saved_models")
 

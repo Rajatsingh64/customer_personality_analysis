@@ -27,10 +27,12 @@ with DAG(
         for file_name in os.listdir(input_dir):
             start_Cluster_prediction(input_file_path=os.path.join(input_dir, file_name))
 
+        
     def sync_prediction_dir_to_s3_bucket(**kwargs):
         bucket_name = os.getenv("BUCKET_NAME")
-        os.system(f"aws s3 sync /app/prediction s3://{bucket_name}/prediction_files")
-
+        #upload prediction folder to predictionfiles folder in s3 bucket
+        os.system(f"aws s3 sync /app/prediction s3://{bucket_name}/clustered_files")
+    
     download_input_files = PythonOperator(
         task_id="download_files",
         python_callable=download_files
