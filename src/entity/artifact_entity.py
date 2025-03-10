@@ -17,6 +17,7 @@ class DataValidationArtifact:
 @dataclass
 class DataTransformationArtifact:
     transformer_object_file_path: Optional[str] = ""
+    transformed_feature_store_file_path: Optional[str] = ""
     transformed_train_data_file_path: Optional[str] = ""
     transformed_test_data_file_path: Optional[str] = ""
 

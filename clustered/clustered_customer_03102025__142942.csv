@@ -1209,7 +1209,7 @@ Undergraduate,Alone,34377.0,55,62,0,22,3,1,26,2,2,2,2,7,1,Baby Boomers,62,1,0,30
 Undergraduate,Alone,8940.0,25,1,45,3,4,6,42,3,3,1,3,8,8,Millennials,39,1,0,88.51485148514851,1,Low Spender
 Undergraduate,Partner,26228.0,50,2,6,4,3,1,9,1,1,0,2,8,9,Gen X,52,1,0,969.270749587855,1,Low Spender
 Postgraduate,Alone,77297.0,84,408,61,109,48,122,41,1,5,7,9,4,1,Baby Boomers,68,0,1,97.96831432192648,2,High Spender
-Undergraduate,Partner,40211.0,30,51,1,7,2,1,25,2,2,1,2,8,7,Millennials,44,2,1,462.1954022988506,0,Moderate Spender
+Undergraduate,Partner,40211.0,30,51,1,7,2,1,25,2,2,1,2,8,7,Millennials,44,2,1,462.1954022988506,1,Low Spender
 PhD,Alone,33438.0,81,62,1,16,3,2,6,4,2,1,4,5,9,Baby Boomers,67,2,0,371.53333333333336,1,Low Spender
 PhD,Partner,75032.0,74,952,12,180,47,12,12,2,5,4,9,3,4,Baby Boomers,66,1,0,61.75473251028807,2,High Spender
 PhD,Alone,61284.0,76,618,15,106,20,7,45,1,11,2,8,6,10,Baby Boomers,70,0,1,75.5659679408138,0,Moderate Spender
@@ -1835,7 +1835,7 @@ Undergraduate,Alone,25008.0,72,2,8,8,6,1,9,2,1,0,3,8,2,Millennials,37,1,0,735.52
 Postgraduate,Alone,83257.0,56,536,27,590,38,107,67,1,5,10,12,6,9,Millennials,30,0,2,60.9941391941392,2,High Spender
 Undergraduate,Partner,22280.0,85,2,1,4,3,1,2,1,1,0,2,8,5,Gen X,50,1,0,969.270749587855,1,Low Spender
 PhD,Partner,72159.0,62,322,53,899,34,40,53,1,4,6,10,2,10,Gen X,47,0,0,51.50535331905782,2,High Spender
-Undergraduate,Partner,64260.0,1,539,169,816,20,0,30,1,4,5,4,3,1,Baby Boomers,64,0,0,40.825921219822106,2,High Spender
+Undergraduate,Partner,64260.0,1,539,169,816,20,0,30,1,4,5,4,3,1,Baby Boomers,64,0,0,40.825921219822106,0,Moderate Spender
 PhD,Alone,82733.0,28,712,50,420,65,38,38,1,8,4,7,4,9,Millennials,41,0,0,62.53439153439153,2,High Spender
 Postgraduate,Alone,74290.0,70,1121,0,72,0,12,12,4,10,8,10,6,8,Gen X,54,1,2,61.04354971240756,2,High Spender
 Postgraduate,Alone,58217.0,84,68,1,13,3,5,13,1,2,0,4,6,11,Baby Boomers,74,3,0,565.2135922330098,0,Moderate Spender
@@ -2195,7 +2195,7 @@ Undergraduate,Partner,36807.0,88,4,2,5,0,0,5,1,1,0,2,6,12,Baby Boomers,71,2,0,96
 Undergraduate,Partner,28427.0,67,18,3,19,3,3,6,2,2,0,3,8,3,Millennials,42,1,0,546.6730769230769,1,Low Spender
 PhD,Alone,82032.0,54,332,194,377,149,125,57,0,4,6,7,1,4,Baby Boomers,77,0,0,66.47649918962723,2,High Spender
 Undergraduate,Partner,22775.0,40,5,1,8,0,0,1,1,1,0,2,8,6,Gen X,47,1,0,969.270749587855,1,Low Spender
-Postgraduate,Partner,40101.0,73,171,3,129,26,24,62,4,6,1,6,7,10,Millennials,40,1,0,96.6289156626506,0,Moderate Spender
+Postgraduate,Partner,40101.0,73,171,3,129,26,24,62,4,6,1,6,7,10,Millennials,40,1,0,96.6289156626506,1,Low Spender
 Undergraduate,Partner,58025.0,81,270,31,88,11,48,22,3,3,2,10,4,11,Gen X,46,1,0,123.45744680851064,0,Moderate Spender
 Postgraduate,Alone,75777.0,12,712,26,538,69,13,80,1,3,6,11,1,7,Millennials,43,0,2,52.69610570236439,2,High Spender
 Postgraduate,Partner,7500.0,7,2,8,11,3,8,21,4,3,2,2,7,5,Gen X,46,1,0,141.50943396226415,1,Low Spender

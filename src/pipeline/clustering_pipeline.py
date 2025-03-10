@@ -11,7 +11,7 @@ from src.config import features_to_drop
 import warnings 
 warnings.filterwarnings("ignore")
 
-Final_Output_DIR = "clustered dataset"
+Final_Output_DIR = "clustered"
 
 
 def start_Cluster_prediction(input_file_path: str) -> str:

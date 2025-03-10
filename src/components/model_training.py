@@ -97,19 +97,23 @@ class ModelTrainer:
     def initiate_model_training(self) -> ModelTrainingArtifact:
 
         try:
+            
+            logging.info(f"Loading original data array for fitting")
+            main_array=load_numpy_array_data(file_path=self.data_transformation_artifact.transformed_feature_store_file_path)
+
             logging.info(f"Loading train and test array file")
             train_array = load_numpy_array_data(file_path=self.data_transformation_artifact.transformed_train_data_file_path)
             test_array = load_numpy_array_data(file_path=self.data_transformation_artifact.transformed_test_data_file_path)
 
             logging.info(f"Train the model")
-            best_model = self.tune_model(X=train_array, no_clusters=10)
-            if best_model is None:
-                raise Exception("No suitable model was found during tuning. Please check the input data or parameters.")
+            #best_model = self.tune_model(X=train_array, no_clusters=10)
+            #if best_model is None:
+                #raise Exception("No suitable model was found during tuning. Please check the input data or parameters.")
             
             #manually increasing cluster 
-            best_model=KMeans(n_clusters=3 , init="k-means++" , n_init=10 , random_state=42 , max_iter=300 , algorithm="lloyd")
-            best_model.fit(train_array)
-            
+            best_model=KMeans(n_clusters=3 , init="k-means++" , n_init=10 , random_state=42 )
+            best_model.fit(main_array)
+
             train_labels = best_model.predict(train_array)
             logging.info(f"Calculating train silhouette_score")
             train_silhouette_score = silhouette_score(train_array, train_labels)

@@ -1,0 +1,17 @@
+version: "3.8"  # Using version 3.8 for compatibility
+
+services:
+  application:
+    image: ${IMAGE_NAME}  # Pulls the image from the specified IMAGE_NAME
+    container_name: customer  # Names the container 'customer'
+    ports:
+      - "8080:8080"  # Exposes port 8080 on the host to port 8080 inside the container
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION}
+      - MONGO_DB_URL=${MONGO_DB_URL}
+      - BUCKET_NAME=${BUCKET_NAME}
+    # Optionally add restart policy, if you need it
+    # restart: always  # Ensures the container restarts on failure or container stop
+   

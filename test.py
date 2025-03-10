@@ -1,4 +1,4 @@
-from src.pipeline.clustered_pipeline import start_Cluster_prediction
+from src.pipeline.clustering_pipeline import start_Cluster_prediction
 
 file="dataset/cleaned_customer.csv"
 

@@ -13,3 +13,12 @@ Customer Personality Analysis helps businesses understand customer behavior, seg
 
 ## 🔄 Ongoing Cluster Pipeline  
 [![Completed Cluster Pipeline](https://img.shields.io/badge/Completed-Cluster%20Pipeline-green)](src/pipeline/cluster_prediction_pipeline.py)
+
+
+``bash
+Docker activatein awscli:
+  - curl -fsSL https://get.docker.com -o get-docker.sh
+  - sudo sh get-docker.sh
+  - sudo usermod -aG docker ubuntu
+  - newgrp docker
+```

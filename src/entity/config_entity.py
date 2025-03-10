@@ -52,8 +52,10 @@ class DataTransformationConfig:
 
         self.data_transformation_dir=os.path.join(training_pipeline_config.artifact_directory , "data_transformation")
         self.transformer_object_file_path=os.path.join(self.data_transformation_dir , "transformer.pkl")
+        self.transformed_feature_store_data=os.path.join(self.data_transformation_dir , "transformed" , "original_customer.npz")
         self.transformed_train_file_path=os.path.join(self.data_transformation_dir , "transformed" , "train.npz")
         self.transformed_test_file_path=os.path.join(self.data_transformation_dir , "transformed" , "test.npz")
+
         self.correlation_threshold=0.8
 
 
