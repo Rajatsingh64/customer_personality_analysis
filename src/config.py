@@ -12,7 +12,7 @@ load_dotenv()
 #Creating class for environments variables , i can directly load all sensitive info without showing anyone
 dataclass 
 class EnvironmentVariables:
-    mongo_url:str = os.getenv("MONGO_URL")
+    mongo_url:str = os.getenv("MONGO_DB_URL")
 
 
 #creating instance/object for class
