@@ -111,7 +111,6 @@ Restaurant-Rating-Prediction/
 📺 **GIF Demo:**  
 ![EC2 Setup](deployment/gifs/ec2_setup.gif)  
 
-> ```bash
 **Install Docker:**
    SSH into your EC2 instance and run the following commands:
 
@@ -121,10 +120,14 @@ Restaurant-Rating-Prediction/
    sudo usermod -aG docker ubuntu
    newgrp docker
    docker --version
+  ```
+
+📺 **GIF Demo:**  
+![EC2 Runner Activation](deployment/gifs/ec2_setup.gif)
 
 > **GitHub Runner Setup:**  
 > After SSH-ing into your EC2 instance, set up the GitHub self-hosted runner by executing the following commands:
-> 
+
 > ```bash
 > # Create a directory for the GitHub Actions runner and navigate into it
 > mkdir actions-runner && cd actions-runner
@@ -143,10 +146,6 @@ Restaurant-Rating-Prediction/
 > ```
 >  
 > *Note: Ensure you have generated a runner token from your GitHub repository's settings under "Actions" → "Runners".*
-```
-📺 **GIF Demo:**  
-![EC2 Runner Activation](deployment/gifs/ec2_setup.gif)
-
 
 ### 3️⃣ **IAM Role & Access Key Setup**  
 📌 **Steps:**  
@@ -154,17 +153,11 @@ Restaurant-Rating-Prediction/
 - Attach necessary policies (e.g., `S3FullAccess`, `EC2FullAccess`)  
 - Generate `AWS_ACCESS_KEY_ID` & `AWS_SECRET_ACCESS_KEY` 
 
-📺 **GIF Demo:**  
-![IAM Setup](deployment/gifs/iam_setup.gif) 
-
-### 2️⃣ **AWS S3 Bucket Creation**  
+ ### 2️⃣ **AWS S3 Bucket Creation**  
 📌 **Steps:**  
 - Navigate to AWS S3  
 - Create a bucket  
 - Set access permissions  
-
-📺 **GIF Demo:**  
-![S3 Bucket Setup](deployment/gifs/s3_setup.gif) 
 
 ## 🐳 AWS ECR Creation Steps
 ### 1️⃣ **Create ECR Repository**  
