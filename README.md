@@ -1,7 +1,5 @@
 ![Header](demo/gif_demo/gif_demo8.gif)
 
-
-# Customer Personality Analysis  
 ![Project Status](https://img.shields.io/badge/Project%20Status-ongoing-orange)
 
 ## 📌 Overview  
