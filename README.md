@@ -14,6 +14,8 @@ Customer Personality Analysis helps businesses understand customer behavior, seg
 📁 [**Notebooks**](notebooks/) | 📁 [**Pipelines**](src/pipeline/) | 📁 [**Airflow DAGs**](airflow/dags/) | 📁 [**Docs**](docs/) | 📁 [**Deployment**](deployment/)
 
 
+
+
 **Admin login**
 ![Apache-Aiflow Admin](demo/gif_demo/gif_demo4.gif)
 
@@ -24,11 +26,20 @@ Customer Personality Analysis helps businesses understand customer behavior, seg
 
 
 
+
+
+
 📺 **Cluster Prediction:**  
 ![Cluster Prediction Dag](demo/gif_demo/gif_demo6.gif)
 
+
+
+
+
 📺 **S3 Bucket**  
 ![CT and Prediction Outputs](demo/gif_demo/gif_demo7.gif)
+
+
 
 <h2 align="">Tools and Technologies Used</h2>
 <p align="center">
@@ -46,10 +57,11 @@ Customer Personality Analysis helps businesses understand customer behavior, seg
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFzCIuPsPokbP-V0RFFgCRJqcve5gpjJmTtg&s" alt="Apache Airflow" height="60">
 </p>
 
-Customer-Personality-Analysis/
+
+
 ## 💁️ Project Structure
 ```
-Restaurant-Rating-Prediction/
+Customer-Personality-Analysis/
 │
 ├── .dockerignore                     # 🚫 Ignore files for Docker
 ├── .env                              # 🔑 Environment variables
