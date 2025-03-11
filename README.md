@@ -13,9 +13,7 @@ Customer Personality Analysis helps businesses understand customer behavior, seg
 📁 [**Notebooks**](notebooks/) | 📁 [**Pipelines**](src/pipeline/) | 📁 [**Airflow DAGs**](airflow/dags/) | 📁 [**Docs**](docs/) | 📁 [**Deployment**](deployment/)
 
 ---
-
-## ✅ Completed Work 
-<h2 align="center">Tools and Technologies Used</h2>
+<h2 align="">Tools and Technologies Used</h2>
 <p align="center">
     <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" height="60">&nbsp;&nbsp;&nbsp;
     <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" alt="Matplotlib" height="60">&nbsp;&nbsp;&nbsp;
@@ -27,11 +25,9 @@ Customer Personality Analysis helps businesses understand customer behavior, seg
     <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="NumPy" height="60">&nbsp;&nbsp;&nbsp;
     <img src="https://streamlit.io/images/brand/streamlit-mark-color.png" alt="Streamlit" height="60">&nbsp;&nbsp;&nbsp;
     <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS3" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://www.mongodb.com/assets/images/global/favicon.ico" alt="MongoDB" height="60">
+    <img src="https://www.mongodb.com/assets/images/global/favicon.ico" alt="MongoDB" height="60">&nbsp;&nbsp;&nbsp;
+    <img src="https://airflow.apache.org/docs/apache-airflow/stable/_images/apache-airflow-icon.png" alt="Apache Airflow" height="60">
 </p>
-
 
 Customer-Personality-Analysis/
 ## 💁️ Project Structure
