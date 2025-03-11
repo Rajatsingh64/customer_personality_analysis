@@ -14,20 +14,20 @@ Customer Personality Analysis helps businesses understand customer behavior, seg
 
 
 📺 **GIF Demo:**  
-![EC2 Runner Activation](demo\gif_demo\gif_demo4.gif)
+![EC2 Runner Activation](demo/gif_demo/gif_demo4.gif)
 
 
 
 📺 **GIF Demo:**  
-![EC2 Runner Activation](demo\gif_demo\gif_demo5.gif)
+![EC2 Runner Activation](demo/gif_demo/gif_demo5.gif)
 
 
 
 📺 **GIF Demo:**  
-![EC2 Runner Activation](demo\gif_demo\gif_demo6.gif)
+![EC2 Runner Activation](demo/gif_demo/gif_demo6.gif)
 
 📺 **GIF Demo:**  
-![EC2 Runner Activation](demo\gif_demo\gif_demo7.gif)
+![EC2 Runner Activation](demo/gif_demo/gif_demo7.gif)
 
 
 
@@ -149,7 +149,7 @@ Restaurant-Rating-Prediction/
   ```
 
 📺 **GIF Demo:**  
-![EC2 Runner Activation](demo\gif_demo\gif_demo3.gif)
+![EC2 Runner Activation](demo/gif_demo/gif_demo3.gif)
 
 > **GitHub Runner Setup(Example):**  
 > After SSH-ing into your EC2 instance, set up the GitHub self-hosted runner by executing the following commands:
@@ -220,26 +220,12 @@ Restaurant-Rating-Prediction/
 [![View GitHub Actions Workflow](https://img.shields.io/badge/View-Main.yml-blue?logo=github)](.github/workflows/main.yml)
 
 📺 **GIF Demo:**  
-![EC2 Runner Activation](demo\gif_demo\gif_demo1.gif)
+![EC2 Runner Activation](demo/gif_demo/gif_demo1.gif)
 
 
 📺 **GIF Demo:**  
-![EC2 Runner Activation](demo\gif_demo\gif_demo2.gif)
+![EC2 Runner Activation](demo/gif_demo/gif_demo2.gif)
 
 
 
-📺 **GIF Demo:**  
-![EC2 Runner Activation](demo\gif_demo\gif_demo4.gif)
 
-
-
-📺 **GIF Demo:**  
-![EC2 Runner Activation](demo\gif_demo\gif_demo5.gif)
-
-
-
-📺 **GIF Demo:**  
-![EC2 Runner Activation](demo\gif_demo\gif_demo6.gif)
-
-📺 **GIF Demo:**  
-![EC2 Runner Activation](demo\gif_demo\gif_demo7.gif)
