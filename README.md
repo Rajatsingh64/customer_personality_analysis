@@ -26,7 +26,7 @@ Customer Personality Analysis helps businesses understand customer behavior, seg
     <img src="https://streamlit.io/images/brand/streamlit-mark-color.png" alt="Streamlit" height="60">&nbsp;&nbsp;&nbsp;
     <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" height="60">&nbsp;&nbsp;&nbsp;
     <img src="https://www.mongodb.com/assets/images/global/favicon.ico" alt="MongoDB" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://airflow.apache.org/docs/apache-airflow/stable/_images/apache-airflow-icon.png" alt="Apache Airflow" height="60">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFzCIuPsPokbP-V0RFFgCRJqcve5gpjJmTtg&s" alt="Apache Airflow" height="60">
 </p>
 
 Customer-Personality-Analysis/
@@ -157,7 +157,7 @@ Restaurant-Rating-Prediction/
 ### 3️⃣ **IAM Role & Access Key Setup**  
 📌 **Steps:**  
 - Create an IAM user  
-- Attach necessary policies (e.g., `S3FullAccess`, `EC2FullAccess` . `AdministratorAcess`)  
+- Attach necessary policies (e.g., `S3FullAccess`, `EC2FullAccess` , `AdministratorAcess`)  
 - Generate `AWS_ACCESS_KEY_ID` & `AWS_SECRET_ACCESS_KEY` 
 
  ### 2️⃣ **AWS S3 Bucket Creation**  
@@ -183,7 +183,7 @@ Restaurant-Rating-Prediction/
   |--------------------------|----------------------------------|
   | `AWS_ACCESS_KEY_ID`      | AWS Access Key                   |
   | `AWS_SECRET_ACCESS_KEY`  | AWS Secret Access Key            |
-  | `AWS_REGION`             | AWS Region (e.g., `us-east-1`)     |
+  | `AWS_REGION`             | AWS Region (e.g., `ap-south-1`)     |
   | `BUCKET_NAME`            | S3 Bucket Name                   |
   | `MONGO_DB_URL`           | MongoDB Connection URL           |
   | `ECR_REPOSITORY_NAME`    | AWS ECR Repository Name          |
