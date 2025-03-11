@@ -13,24 +13,21 @@ Customer Personality Analysis helps businesses understand customer behavior, seg
 📁 [**Notebooks**](notebooks/) | 📁 [**Pipelines**](src/pipeline/) | 📁 [**Airflow DAGs**](airflow/dags/) | 📁 [**Docs**](docs/) | 📁 [**Deployment**](deployment/)
 
 
-📺 **GIF Demo:**  
-![EC2 Runner Activation](demo/gif_demo/gif_demo4.gif)
+**Admin login**
+![Apache-Aiflow Admin](demo/gif_demo/gif_demo4.gif)
 
 
 
-📺 **GIF Demo:**  
-![EC2 Runner Activation](demo/gif_demo/gif_demo5.gif)
+📺 **Continuous Training:**  
+![Airflow Continuous Training Dag](demo/gif_demo/gif_demo5.gif)
 
 
 
-📺 **GIF Demo:**  
-![EC2 Runner Activation](demo/gif_demo/gif_demo6.gif)
+📺 **Cluster Prediction:**  
+![Cluster Prediction Dag](demo/gif_demo/gif_demo6.gif)
 
-📺 **GIF Demo:**  
-![EC2 Runner Activation](demo/gif_demo/gif_demo7.gif)
-
-
-
+📺 **S3 Bucket**  
+![CT and Prediction Outputs](demo/gif_demo/gif_demo7.gif)
 
 <h2 align="">Tools and Technologies Used</h2>
 <p align="center">
@@ -147,10 +144,6 @@ Restaurant-Rating-Prediction/
    newgrp docker
    docker --version
   ```
-
-📺 **GIF Demo:**  
-![EC2 Runner Activation](demo/gif_demo/gif_demo3.gif)
-
 > **GitHub Runner Setup(Example):**  
 > After SSH-ing into your EC2 instance, set up the GitHub self-hosted runner by executing the following commands:
 
@@ -208,9 +201,6 @@ Restaurant-Rating-Prediction/
   | `ECR_REPOSITORY_NAME`    | AWS ECR Repository Name          |
   | `AWS_ECR_LOGIN_URI`      | AWS ECR Login URI                |
 
-📺 **GIF Demo:**  
-![GitHub Secrets](deployment/gifs/github_secrets.gif)  
-
 ### 5️⃣ **GitHub Actions CI/CD (`main.yml`)**  
 📌 **Steps:**  
 - Configure `.github/workflows/main.yml`  
@@ -219,12 +209,6 @@ Restaurant-Rating-Prediction/
 📄 **GitHub Actions Workflow:**  
 [![View GitHub Actions Workflow](https://img.shields.io/badge/View-Main.yml-blue?logo=github)](.github/workflows/main.yml)
 
-📺 **GIF Demo:**  
-![EC2 Runner Activation](demo/gif_demo/gif_demo1.gif)
-
-
-📺 **GIF Demo:**  
-![EC2 Runner Activation](demo/gif_demo/gif_demo2.gif)
 
 
 
