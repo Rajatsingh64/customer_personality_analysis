@@ -5,7 +5,7 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 
 with DAG(
-    'Customer_Personality',
+    'Customer_Continuous_Training',
     default_args={'retries': 2},
     description='Customer Personality Analysis',
     schedule_interval="@weekly",

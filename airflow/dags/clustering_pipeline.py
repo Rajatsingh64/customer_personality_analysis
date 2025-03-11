@@ -6,7 +6,7 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 
 with DAG(
-    'Customer_Personality',
+    'Customer_Cluster_Prediction',
     default_args={'retries': 2},
     description='Customer Personality Analysis',
     schedule_interval="@weekly",
