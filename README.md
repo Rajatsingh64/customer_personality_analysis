@@ -12,7 +12,26 @@ Customer Personality Analysis helps businesses understand customer behavior, seg
 ## 📂 Project Navigation  
 📁 [**Notebooks**](notebooks/) | 📁 [**Pipelines**](src/pipeline/) | 📁 [**Airflow DAGs**](airflow/dags/) | 📁 [**Docs**](docs/) | 📁 [**Deployment**](deployment/)
 
----
+
+📺 **GIF Demo:**  
+![EC2 Runner Activation](demo\gif_demo\gif_demo4.gif)
+
+
+
+📺 **GIF Demo:**  
+![EC2 Runner Activation](demo\gif_demo\gif_demo5.gif)
+
+
+
+📺 **GIF Demo:**  
+![EC2 Runner Activation](demo\gif_demo\gif_demo6.gif)
+
+📺 **GIF Demo:**  
+![EC2 Runner Activation](demo\gif_demo\gif_demo7.gif)
+
+
+
+
 <h2 align="">Tools and Technologies Used</h2>
 <p align="center">
     <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" height="60">&nbsp;&nbsp;&nbsp;
@@ -130,7 +149,7 @@ Restaurant-Rating-Prediction/
   ```
 
 📺 **GIF Demo:**  
-![EC2 Runner Activation](deployment/gifs/ec2_setup.gif)
+![EC2 Runner Activation](demo\gif_demo\gif_demo3.gif)
 
 > **GitHub Runner Setup(Example):**  
 > After SSH-ing into your EC2 instance, set up the GitHub self-hosted runner by executing the following commands:
@@ -200,4 +219,27 @@ Restaurant-Rating-Prediction/
 📄 **GitHub Actions Workflow:**  
 [![View GitHub Actions Workflow](https://img.shields.io/badge/View-Main.yml-blue?logo=github)](.github/workflows/main.yml)
 
+📺 **GIF Demo:**  
+![EC2 Runner Activation](demo\gif_demo\gif_demo1.gif)
 
+
+📺 **GIF Demo:**  
+![EC2 Runner Activation](demo\gif_demo\gif_demo2.gif)
+
+
+
+📺 **GIF Demo:**  
+![EC2 Runner Activation](demo\gif_demo\gif_demo4.gif)
+
+
+
+📺 **GIF Demo:**  
+![EC2 Runner Activation](demo\gif_demo\gif_demo5.gif)
+
+
+
+📺 **GIF Demo:**  
+![EC2 Runner Activation](demo\gif_demo\gif_demo6.gif)
+
+📺 **GIF Demo:**  
+![EC2 Runner Activation](demo\gif_demo\gif_demo7.gif)
