@@ -79,8 +79,8 @@ Restaurant-Rating-Prediction/
 ```
 
 ### 🔄 EDA & Feature Engineering  
-[![Completed EDA & FE](https://img.shields.io/badge/AlmostDone-EDA%20%26%20FE-blue)](notebooks/EDA%20&%20Feature_Engineering.ipynb)  
-[![Completed Preprocessing & Model Training](https://img.shields.io/badge/AlmostDone-Preprocessing%20%26%20Model%20Training-blue)](notebooks/Preprocessing%20%26%20Model_training.ipynb)
+[![Completed EDA & FE](https://img.shields.io/badge/Completed-EDA%20%26%20FE-green)](notebooks/EDA%20&%20Feature_Engineering.ipynb)  
+[![Completed Preprocessing & Model Training](https://img.shields.io/badge/Completed-Preprocessing%20%26%20Model%20Training-green)](notebooks/Preprocessing%20%26%20Model_training.ipynb)
 
 ### 🔄 Machine Learning Pipelines  
 [![Completed Training Pipeline](https://img.shields.io/badge/Completed-Training%20Pipeline-green)](src/pipeline/training_pipeline.py)  
@@ -94,9 +94,9 @@ Restaurant-Rating-Prediction/
 ---
 
 ## 📜 Architecture Documentation  
-[![HLD (High-Level Design)](https://img.shields.io/badge/Available-HLD-blue)](docs/HLD.pdf)  
-[![LLD (Low-Level Design)](https://img.shields.io/badge/Available-LLD-blue)](docs/LLD.pdf)  
-[![DPR (Detailed Project Report)](https://img.shields.io/badge/Available-DPR-blue)](docs/DPR.pdf)
+[![HLD (High-Level Design)](https://img.shields.io/badge/Ongoing-HLD-blue)](docs/HLD.pdf)  
+[![LLD (Low-Level Design)](https://img.shields.io/badge/Ongoin-LLD-blue)](docs/LLD.pdf)  
+[![DPR (Detailed Project Report)](https://img.shields.io/badge/Ongoin-DPR-blue)](docs/DPR.pdf)
 
 ---
 
@@ -108,9 +108,7 @@ Restaurant-Rating-Prediction/
 - Configure security groups  
 - SSH into the instance  
 
-📺 **GIF Demo:**  
-![EC2 Setup](deployment/gifs/ec2_setup.gif)  
-
+  
 **Install Docker:**
    SSH into your EC2 instance and run the following commands:
 
@@ -125,7 +123,7 @@ Restaurant-Rating-Prediction/
 📺 **GIF Demo:**  
 ![EC2 Runner Activation](deployment/gifs/ec2_setup.gif)
 
-> **GitHub Runner Setup:**  
+> **GitHub Runner Setup(Example):**  
 > After SSH-ing into your EC2 instance, set up the GitHub self-hosted runner by executing the following commands:
 
 > ```bash
@@ -145,12 +143,12 @@ Restaurant-Rating-Prediction/
 > ./run.sh
 > ```
 >  
-> *Note: Ensure you have generated a runner token from your GitHub repository's settings under "Actions" → "Runners".*
+> *Note: Ensure you have generated a runner token from your GitHub repository's settings under "Actions" → "Runners" → create "New-self-hosted-runner" → "linux".*
 
 ### 3️⃣ **IAM Role & Access Key Setup**  
 📌 **Steps:**  
 - Create an IAM user  
-- Attach necessary policies (e.g., `S3FullAccess`, `EC2FullAccess`)  
+- Attach necessary policies (e.g., `S3FullAccess`, `EC2FullAccess` . `AdministratorAcess`)  
 - Generate `AWS_ACCESS_KEY_ID` & `AWS_SECRET_ACCESS_KEY` 
 
  ### 2️⃣ **AWS S3 Bucket Creation**  
