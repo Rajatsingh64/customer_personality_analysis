@@ -29,7 +29,7 @@ RUN airflow users create \
     --password "${AIRFLOW_PASSWORD}" \
     --role "Admin" \
     --username "${AIRFLOW_USERNAME}" \
-    --no-input  # Ensures no interactive input is requested
+    --no-input
 
 # Allow script execution
 RUN chmod 777 start.sh
