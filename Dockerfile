@@ -1,9 +1,14 @@
 FROM python:3.12
 
-# Use build arguments for sensitive data during build time
+# Declare build arguments
 ARG AIRFLOW_EMAIL
 ARG AIRFLOW_USERNAME
 ARG AIRFLOW_PASSWORD
+
+# Set environment variables from build arguments
+ENV AIRFLOW_EMAIL=${AIRFLOW_EMAIL}
+ENV AIRFLOW_USERNAME=${AIRFLOW_USERNAME}
+ENV AIRFLOW_PASSWORD=${AIRFLOW_PASSWORD}
 
 USER root
 RUN mkdir /app
