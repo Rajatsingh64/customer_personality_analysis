@@ -228,6 +228,26 @@ Customer-Personality-Analysis/
 📄 **GitHub Actions Workflow:**  
 [![View GitHub Actions Workflow](https://img.shields.io/badge/View-Main.yml-blue?logo=github)](.github/workflows/main.yml)
 
+# Important Notes
+
+## Triggering Workflow:
+- **To trigger the workflow**: Ensure that you **push a commit** to the repository. This will automatically trigger the workflow set up in the CI/CD pipeline.
+
+## Modifying Inbound Rules for Port 8080:
+When deploying or working with a service that needs to expose port 8080, follow these steps to update the inbound rules:
+
+### Steps to Configure:
+1. **Go to your cloud provider's dashboard** (AWS, Azure, etc.).
+2. **Navigate to the Security Group** or **Firewall** section where your server or instance is located.
+3. **Modify the Inbound Rules**:
+   - Add a new inbound rule to allow traffic on port **8080**.
+   - Select **Custom TCP Rule** for the protocol.
+   - Set the **Port Range** to `8080`.
+   - Choose **Source**: Either a specific IP range or `0.0.0.0/0` for public access (use cautiously for security reasons).
+4. **Save the changes**.
+
+This ensures that external traffic can access your application on port 8080.
+
 ---
 
 ## 🚀 Connect with Me  
