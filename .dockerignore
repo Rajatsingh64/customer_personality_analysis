@@ -1,7 +1,7 @@
 artifact
 logs
 notebook
-clustered files
+clustered_files
 saved_models
 *.egg-info
 .env

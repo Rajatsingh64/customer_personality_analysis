@@ -30,8 +30,7 @@ with DAG(
         
     def sync_prediction_dir_to_s3_bucket(**kwargs):
         bucket_name = os.getenv("BUCKET_NAME")
-        #upload prediction folder to predictionfiles folder in s3 bucket
-        os.system(f"aws s3 sync /app/clustered files s3://{bucket_name}/clustered_files")
+        os.system(f"aws s3 sync /app/clustered_files s3://{bucket_name}/clustered_files")
     
     download_input_files = PythonOperator(
         task_id="download_files",
