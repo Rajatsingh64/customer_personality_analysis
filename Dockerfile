@@ -35,7 +35,7 @@ RUN airflow users create \
     --last "Singh" \
     --password "${AIRFLOW_PASSWORD}" \
     --role "Admin" \
-    --username "${AIRFLOW_USERNAME}" --no-input
+    --username "${AIRFLOW_USERNAME}" 
 
 
 # Allow script execution
