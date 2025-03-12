@@ -228,9 +228,6 @@ When deploying or working with a service that needs to expose port 8080, follow 
 4. **Save the changes**.
 
 This ensures that external traffic can access your application on port 8080.
-
----
-
 ## 🚀 Connect with Me  
 
 <p align="center">
@@ -244,8 +241,6 @@ This ensures that external traffic can access your application on port 8080.
         <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
     </a>
 </p>
-
----
 
 <p align="center">
     💻 Developed by <strong>Rajat Singh</strong> | ⚡ Powered by Passion & Code  
