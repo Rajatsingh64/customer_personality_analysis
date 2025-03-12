@@ -108,39 +108,21 @@ Customer-Personality-Analysis/
 ```
 <h2 align="">Tools and Technologies Used</h2>
 <p align="center">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" alt="Matplotlib" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png" alt="AWS" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg" alt="Docker" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://seaborn.pydata.org/_images/logo-wide-lightbg.svg" alt="Seaborn" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" alt="Pandas" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="NumPy" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://streamlit.io/images/brand/streamlit-mark-color.png" alt="Streamlit" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://www.mongodb.com/assets/images/global/favicon.ico" alt="MongoDB" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFzCIuPsPokbP-V0RFFgCRJqcve5gpjJmTtg&s" alt="Apache Airflow" height="60">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" height="30">&nbsp;&nbsp;&nbsp;
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" alt="Matplotlib" height="30">&nbsp;&nbsp;&nbsp;
+    <img src="https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png" alt="AWS" height="30">&nbsp;&nbsp;&nbsp;
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg" alt="Docker" height="30">&nbsp;&nbsp;&nbsp;
+    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" height="30">&nbsp;&nbsp;&nbsp;
+    <img src="https://seaborn.pydata.org/_images/logo-wide-lightbg.svg" alt="Seaborn" height="30">&nbsp;&nbsp;&nbsp;
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" alt="Pandas" height="30">&nbsp;&nbsp;&nbsp;
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="NumPy" height="30">&nbsp;&nbsp;&nbsp;
+    <img src="https://streamlit.io/images/brand/streamlit-mark-color.png" alt="Streamlit" height="30">&nbsp;&nbsp;&nbsp;
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" height="30">&nbsp;&nbsp;&nbsp;
+    <img src="https://www.mongodb.com/assets/images/global/favicon.ico" alt="MongoDB" height="30">&nbsp;&nbsp;&nbsp;
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFzCIuPsPokbP-V0RFFgCRJqcve5gpjJmTtg&s" alt="Apache Airflow" height="30">
 </p>
 
-### 🔄 EDA & Feature Engineering  
-[![Completed EDA & FE](https://img.shields.io/badge/Completed-EDA%20%26%20FE-green)](notebooks/EDA%20&%20Feature_Engineering.ipynb)  
-[![Completed Preprocessing & Model Training](https://img.shields.io/badge/Completed-Preprocessing%20%26%20Model%20Training-green)](notebooks/Preprocessing%20%26%20Model_training.ipynb)
-
-### 🔄 Machine Learning Pipelines  
-[![Completed Training Pipeline](https://img.shields.io/badge/Completed-Training%20Pipeline-green)](src/pipeline/training_pipeline.py)  
-[![Completed Clustering Prediction Pipeline](https://img.shields.io/badge/Completed-Cluster%20Pipeline-green)](src/pipeline/cluster_prediction_pipeline.py)
-
-### 🔄 Airflow DAGs  
-[![Completed Airflow DAG](https://img.shields.io/badge/Completed-Airflow%20DAG-green)](airflow/dags)  
 ---
-
-## 📜 Architecture Documentation  
-[![HLD (High-Level Design)](https://img.shields.io/badge/Ongoing-HLD-orange)](docs/HLD.pdf)  
-[![LLD (Low-Level Design)](https://img.shields.io/badge/Ongoing-LLD-orange)](docs/LLD.pdf)  
-[![DPR (Detailed Project Report)](https://img.shields.io/badge/Ongoing-DPR-orange)](docs/DPR.pdf)
-
----
-
 ## 🚀 Step-by-Step Deployment Guide  
 
 ### 1️⃣ **AWS EC2 Instance Setup**  
