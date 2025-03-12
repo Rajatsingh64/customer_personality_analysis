@@ -1,6 +1,7 @@
-![Header](demo/gif_demo/gif_demo8.gif)
-
 ![Project Status](https://img.shields.io/badge/Project%20Status-ongoing-orange)
+<div align="center">
+    <img src="demo/gif_demo/gif_demo8.gif" alt="Header" style="width:100%; border-radius:10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
+</div>
 
 ## 📌 Overview  
 Customer Personality Analysis helps businesses understand customer behavior, segment users, and provide personalized recommendations. This project leverages **Machine Learning Operations (MLOps)** to streamline model training, deployment, and monitoring.
@@ -14,50 +15,36 @@ Customer Personality Analysis helps businesses understand customer behavior, seg
 📁 [**Notebooks**](notebooks/) | 📁 [**Pipelines**](src/pipeline/) | 📁 [**Airflow DAGs**](airflow/dags/) | 📁 [**Docs**](docs/) | 📁 [**Deployment**](deployment/)
 
 
+## 🔹 Apache Airflow Workflow Overview
 
+### 🚀 **Admin Login**  
+This step demonstrates the login process for the Apache Airflow Admin panel.  
 
-**Admin login**
-![Apache-Aiflow Admin](demo/gif_demo/gif_demo4.gif)
+![Apache Airflow Admin](demo/gif_demo/gif_demo4.gif)  
 
+---
 
+### 📺 **Continuous Training Pipeline (CT)**  
+This DAG automates the continuous training of the model, ensuring it stays updated with new data.  
 
-📺 **Continuous Training:**  
-![Airflow Continuous Training Dag](demo/gif_demo/gif_demo5.gif)
+![Airflow Continuous Training Dag](demo/gif_demo/gif_demo5.gif)  
 
+---
 
+### 📊 **Cluster Prediction DAG**  
+This step runs the clustering model to generate predictions.  
 
+![Cluster Prediction Dag](demo/gif_demo/gif_demo6.gif)  
 
+---
 
+### ☁️ **S3 Bucket Outputs**  
+The S3 bucket stores all generated outputs, including:  
+- ✅ **Saved Models**  
+- 📂 **Clustered Files**  
+- 🔍 **Artifacts**  
 
-📺 **Cluster Prediction:**  
-![Cluster Prediction Dag](demo/gif_demo/gif_demo6.gif)
-
-
-
-
-
-📺 **S3 Bucket**  
-![CT and Prediction Outputs](demo/gif_demo/gif_demo7.gif)
-
-
-
-<h2 align="">Tools and Technologies Used</h2>
-<p align="center">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" alt="Matplotlib" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png" alt="AWS" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg" alt="Docker" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://seaborn.pydata.org/_images/logo-wide-lightbg.svg" alt="Seaborn" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" alt="Pandas" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="NumPy" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://streamlit.io/images/brand/streamlit-mark-color.png" alt="Streamlit" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://www.mongodb.com/assets/images/global/favicon.ico" alt="MongoDB" height="60">&nbsp;&nbsp;&nbsp;
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFzCIuPsPokbP-V0RFFgCRJqcve5gpjJmTtg&s" alt="Apache Airflow" height="60">
-</p>
-
-
+![CT and Prediction Outputs](demo/gif_demo/gif_demo7.gif)  
 
 ## 💁️ Project Structure
 ```
@@ -67,6 +54,10 @@ Customer-Personality-Analysis/
 ├── .env                              # 🔑 Environment variables
 ├── .gitignore                        # 🚫 Ignore files for Git
 │
+|── demo/
+|   ├── project_full_demo.mp4         # Full Project Explaination
+│   └── gif_assets/                   # gif short demo
+| 
 ├── .github/
 │   └── workflows/
 │       └── main.yaml                 # ⚙️ GitHub Actions CI/CD pipeline
@@ -115,6 +106,21 @@ Customer-Personality-Analysis/
 │   │
 │   └── utils.py                      # 🛠️ Utility functions
 ```
+<h2 align="">Tools and Technologies Used</h2>
+<p align="center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" height="60">&nbsp;&nbsp;&nbsp;
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" alt="Matplotlib" height="60">&nbsp;&nbsp;&nbsp;
+    <img src="https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png" alt="AWS" height="60">&nbsp;&nbsp;&nbsp;
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg" alt="Docker" height="60">&nbsp;&nbsp;&nbsp;
+    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" height="60">&nbsp;&nbsp;&nbsp;
+    <img src="https://seaborn.pydata.org/_images/logo-wide-lightbg.svg" alt="Seaborn" height="60">&nbsp;&nbsp;&nbsp;
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" alt="Pandas" height="60">&nbsp;&nbsp;&nbsp;
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="NumPy" height="60">&nbsp;&nbsp;&nbsp;
+    <img src="https://streamlit.io/images/brand/streamlit-mark-color.png" alt="Streamlit" height="60">&nbsp;&nbsp;&nbsp;
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" height="60">&nbsp;&nbsp;&nbsp;
+    <img src="https://www.mongodb.com/assets/images/global/favicon.ico" alt="MongoDB" height="60">&nbsp;&nbsp;&nbsp;
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFzCIuPsPokbP-V0RFFgCRJqcve5gpjJmTtg&s" alt="Apache Airflow" height="60">
+</p>
 
 ### 🔄 EDA & Feature Engineering  
 [![Completed EDA & FE](https://img.shields.io/badge/Completed-EDA%20%26%20FE-green)](notebooks/EDA%20&%20Feature_Engineering.ipynb)  
@@ -126,15 +132,12 @@ Customer-Personality-Analysis/
 
 ### 🔄 Airflow DAGs  
 [![Completed Airflow DAG](https://img.shields.io/badge/Completed-Airflow%20DAG-green)](airflow/dags)  
-- [`training_pipeline.py`](airflow/dags/training_pipeline.py)  
-- [`clustering_pipeline_dag.py`](airflow/dags/clustering_pipeline_dag.py)
-
 ---
 
 ## 📜 Architecture Documentation  
-[![HLD (High-Level Design)](https://img.shields.io/badge/Ongoing-HLD-blue)](docs/HLD.pdf)  
-[![LLD (Low-Level Design)](https://img.shields.io/badge/Ongoin-LLD-blue)](docs/LLD.pdf)  
-[![DPR (Detailed Project Report)](https://img.shields.io/badge/Ongoin-DPR-blue)](docs/DPR.pdf)
+[![HLD (High-Level Design)](https://img.shields.io/badge/Ongoing-HLD-orange)](docs/HLD.pdf)  
+[![LLD (Low-Level Design)](https://img.shields.io/badge/Ongoing-LLD-orange)](docs/LLD.pdf)  
+[![DPR (Detailed Project Report)](https://img.shields.io/badge/Ongoing-DPR-orange)](docs/DPR.pdf)
 
 ---
 
@@ -208,12 +211,15 @@ Customer-Personality-Analysis/
   |--------------------------|----------------------------------|
   | `AWS_ACCESS_KEY_ID`      | AWS Access Key                   |
   | `AWS_SECRET_ACCESS_KEY`  | AWS Secret Access Key            |
-  | `AWS_REGION`             | AWS Region (e.g., `ap-south-1`)     |
+  | `AWS_REGION`             | AWS Region (e.g., `ap-south-1`)  |
   | `BUCKET_NAME`            | S3 Bucket Name                   |
   | `MONGO_DB_URL`           | MongoDB Connection URL           |
   | `ECR_REPOSITORY_NAME`    | AWS ECR Repository Name          |
   | `AWS_ECR_LOGIN_URI`      | AWS ECR Login URI                |
-
+  | `AIRFLOW_USER_EMAIL`     | Airflow User Email               |
+  | `AIRFLOW_USERNAME`       | Airflow  Admin Username          |
+  | `AIRFLOW_PASSWORD`       | Airflow Admin Password           |
+ 
 ### 5️⃣ **GitHub Actions CI/CD (`main.yml`)**  
 📌 **Steps:**  
 - Configure `.github/workflows/main.yml`  
@@ -221,6 +227,33 @@ Customer-Personality-Analysis/
 
 📄 **GitHub Actions Workflow:**  
 [![View GitHub Actions Workflow](https://img.shields.io/badge/View-Main.yml-blue?logo=github)](.github/workflows/main.yml)
+
+---
+
+## 🚀 Connect with Me  
+
+<p align="center">
+    <a href="https://github.com/your-github-username" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+    </a>
+    <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+    </a>
+    <a href="mailto:your-email@example.com">
+        <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+    </a>
+</p>
+
+---
+
+<p align="center">
+    💻 Developed by <strong>Rajat Singh</strong> | ⚡ Powered by Passion & Code  
+</p>
+
+<p align="center">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&center=true&width=435&lines=Thanks+for+visiting!;Happy+Coding!+🚀" alt="Typing SVG">
+</p>
+
 
 
 
