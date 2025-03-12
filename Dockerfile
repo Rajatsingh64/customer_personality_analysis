@@ -24,14 +24,14 @@ RUN airflow db init
 # Check Airflow version (optional)
 RUN airflow version
 
-# Create Airflow user using build-time arguments
 RUN airflow users create \
     --email "${AIRFLOW_EMAIL}" \
     --first "Rajat" \
     --last "Singh" \
     --password "${AIRFLOW_PASSWORD}" \
     --role "Admin" \
-    --username "${AIRFLOW_USERNAME}"
+    --username "${AIRFLOW_USERNAME}" --no-input
+
 
 # Allow script execution
 RUN chmod 777 start.sh
