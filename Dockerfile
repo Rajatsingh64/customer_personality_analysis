@@ -39,4 +39,4 @@ RUN apt update -y && apt install awscli -y
 
 # Set entrypoint to start Airflow
 ENTRYPOINT [ "/bin/sh" ]
-CMD ["start.sh"]
+CMD ["start.sh"] 
