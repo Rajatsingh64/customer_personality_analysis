@@ -64,10 +64,10 @@ Customer-Personality-Analysis/
 │
 ├── airflow/                          # 💨 Apache Airflow DAGs
 │   └── dags/                         # 📅 Workflow DAGs
-│       ├── clustering_pipeline.py# 🔍 Airflow DAG for clustering
-│       └── training_pipeline.py      # 🎯 Airflow DAG for model training
+│       ├── clustering_pipeline.py.   #🔍 Airflow DAG for clustering
+│       └── training_pipeline.py      #🎯 Airflow DAG for model training
 │
-├── artifact/                        # 🐂 Contains all intermediate and final outputs
+├── artifact/                         # 🐂 Contains all intermediate and final outputs
 ├── clustered_files/                  # 📂 Clustered processed files
 ├── data_dump.py                      # 🛋️ Dumps data into MongoDB Atlas
 ├── docker-compose.yml                # 🔧 Docker Compose for multi-container setup
