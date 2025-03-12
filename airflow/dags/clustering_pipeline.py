@@ -47,5 +47,5 @@ with DAG(
         task_id="upload_predictions",
         python_callable=sync_prediction_dir_to_s3_bucket
     )
-
+ 
     download_input_files >> generate_prediction_files >> upload_prediction_files
