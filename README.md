@@ -12,7 +12,7 @@ Customer Personality Analysis helps businesses understand customer behavior, seg
 ---
 
 ## 📂 Project Navigation  
-📁 [**Notebooks**](notebooks/) | 📁 [**Pipelines**](src/pipeline/) | 📁 [**Airflow DAGs**](airflow/dags/) | 📁 [**Docs**](docs/) | 📁 [**Deployment**](deployment/)
+📁 [**Notebooks**](notebook/) | 📁 [**Pipelines**](src/pipeline/) | 📁 [**Airflow DAGs**](airflow/dags/) | 📁 [**Docs**](docs/) | 📁 [**Deployment**](.github/workflows/)
 
 
 ## 🔹 Apache Airflow Workflow Overview
