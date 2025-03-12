@@ -45,7 +45,7 @@ class ModelEvaluation:
             # Check if a previously saved production model exists for comparison.
             logging.info("Checking if a saved production model exists for performance comparison.")
             latest_dir_path = self.model_resovler.get_latest_dir_path()
-            if latest_dir_path is None:
+            if latest_dir_path==None:
                 # No production model found; accept the new model by default.
                 model_evaluation_artifact = artifact_entity.ModelEvaluationArtifact(
                     is_model_accepted=True,
@@ -109,7 +109,7 @@ class ModelEvaluation:
             logging.info(f"Silhouette score for newly trained model: {current_model_score}")
 
             # If the new model does not outperform the production model, reject it.
-            if current_model_score <= previous_model_score:
+            if current_model_score < previous_model_score:
                 logging.info("The newly trained model does not outperform the current production model.")
                 raise Exception("Current trained model is not better than the previous model")
 

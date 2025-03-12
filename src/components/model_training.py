@@ -111,7 +111,7 @@ class ModelTrainer:
                 #raise Exception("No suitable model was found during tuning. Please check the input data or parameters.")
             
             #manually increasing cluster 
-            best_model=KMeans(n_clusters=3 , init="k-means++" , n_init=10 , random_state=42 )
+            best_model=KMeans(n_clusters=3, init="k-means++" , n_init=10 , random_state=42 )
             best_model.fit(main_array)
 
             train_labels = best_model.predict(train_array)
