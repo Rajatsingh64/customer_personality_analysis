@@ -21,6 +21,9 @@ ENV AIRFLOW__CORE__ENABLE_XCOM_PICKLING=True
 # Initialize Airflow DB
 RUN airflow db init
 
+# Check Airflow version (optional)
+RUN airflow version
+
 # Create Airflow user using build-time arguments
 RUN airflow users create \
     --email "${AIRFLOW_EMAIL}" \
@@ -28,8 +31,7 @@ RUN airflow users create \
     --last "Singh" \
     --password "${AIRFLOW_PASSWORD}" \
     --role "Admin" \
-    --username "${AIRFLOW_USERNAME}" \
-    --no-input
+    --username "${AIRFLOW_USERNAME}"
 
 # Allow script execution
 RUN chmod 777 start.sh
@@ -39,4 +41,4 @@ RUN apt update -y && apt install awscli -y
 
 # Set entrypoint to start Airflow
 ENTRYPOINT [ "/bin/sh" ]
-CMD ["start.sh"] 
+CMD ["start.sh"]
