@@ -64,7 +64,7 @@ Customer-Personality-Analysis/
 │
 ├── airflow/                          # 💨 Apache Airflow DAGs
 │   └── dags/                         # 📅 Workflow DAGs
-│       ├── clustering_pipeline.py.   #🔍 Airflow DAG for clustering
+│       ├── clustering_pipeline.py    #🔍 Airflow DAG for clustering
 │       └── training_pipeline.py      #🎯 Airflow DAG for model training
 │
 ├── artifact/                         # 🐂 Contains all intermediate and final outputs
