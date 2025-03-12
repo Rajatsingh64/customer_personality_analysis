@@ -1,6 +1,6 @@
 ![Project Status](https://img.shields.io/badge/Project%20Status-ongoing-orange)
 <div align="center">
-    <img src="demo/gif_demo/gif_demo8.gif" alt="Header" style="width:100%; border-radius:10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
+    <img src="demo/gif_assets/gif_demo1.gif" alt="Header" style="width:100%; border-radius:10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
 </div>
 
 ## 📌 Overview  
@@ -20,21 +20,21 @@ Customer Personality Analysis helps businesses understand customer behavior, seg
 ### 🚀 **Admin Login**  
 This step demonstrates the login process for the Apache Airflow Admin panel.  
 
-![Apache Airflow Admin](demo/gif_demo/gif_demo4.gif)  
+![Apache Airflow Admin](demo/gif_assets/gif_demo2.gif)  
 
 ---
 
 ### 📺 **Continuous Training Pipeline (CT)**  
 This DAG automates the continuous training of the model, ensuring it stays updated with new data.  
 
-![Airflow Continuous Training Dag](demo/gif_demo/gif_demo5.gif)  
+![Airflow Continuous Training Dag](demo/gif_assets/gif_demo3.gif)  
 
 ---
 
 ### 📊 **Cluster Prediction DAG**  
 This step runs the clustering model to generate predictions.  
 
-![Cluster Prediction Dag](demo/gif_demo/gif_demo6.gif)  
+![Cluster Prediction Dag](demo/gif_assets/gif_demo4.gif)  
 
 ---
 
@@ -44,7 +44,7 @@ The S3 bucket stores all generated outputs, including:
 - 📂 **Clustered Files**  
 - 🔍 **Artifacts**  
 
-![CT and Prediction Outputs](demo/gif_demo/gif_demo7.gif)  
+![CT and Prediction Outputs](demo/gif_assets/gif_demo5.gif)  
 
 ## 💁️ Project Structure
 ```
