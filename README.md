@@ -122,7 +122,6 @@ Customer-Personality-Analysis/
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFzCIuPsPokbP-V0RFFgCRJqcve5gpjJmTtg&s" alt="Apache Airflow" height="40">
 </p>
 
----
 ## 🚀 Step-by-Step Deployment Guide  
 
 ### 1️⃣ **AWS EC2 Instance Setup**  
