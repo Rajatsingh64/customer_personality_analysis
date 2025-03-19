@@ -149,18 +149,25 @@ Customer-Personality-Analysis/
 > mkdir actions-runner && cd actions-runner
 > 
 > # Download the latest runner package (update the version as needed)
-> curl -o actions-runner-linux-x64.tar.gz -L https://github.com/actions/runner/releases/download/v2.300.0/actions-runner-linux-x64-2.300.0.tar.gz
+> curl -o actions-runner-linux-x64-2.322.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.322.0/actions-runner-linux-x64-2.322.0.tar.gz
 > 
-> # Extract the runner package
-> tar xzf actions-runner-linux-x64.tar.gz
+> # Optional: Validate the has
+> echo "b13b784808359f31bc79b08a191f5f83757852957dd8fe3dbfcc38202ccf5768  actions-runner-linux-x64-2.322.0.tar.gz" | shasum -a 256 -c
+> 
+> # Extract the installer
+> tar xzf ./actions-runner-linux-x64-2.322.0.tar.gz
 > 
 > # Configure the runner (replace <REPO_URL> and <RUNNER_TOKEN> with your repository URL and runner token)
-> ./config.sh --url https://github.com/<your-username>/<your-repository> --token <RUNNER_TOKEN>
+> ./config.sh --url https://github.com/Rajatsingh64/customer_personality_analysis --token XYZ
 > 
 > # Start the runner
 > ./run.sh
-> ```
+> 
 >  
+> # Use this YAML in your workflow file for each job
+> runs-on: self-hosted
+>
+>```
 > *Note: Ensure you have generated a runner token from your GitHub repository's settings under "Actions" → "Runners" → create "New-self-hosted-runner" → "linux".*
 
 ### 3️⃣ **IAM Role & Access Key Setup**  
