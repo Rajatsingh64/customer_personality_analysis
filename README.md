@@ -1,6 +1,6 @@
 ![Project Status](https://img.shields.io/badge/Project%20Status-ongoing-orange)
 <div align="center">
-    <img src="demo/gif_assets/gif_demo1.gif" alt="Header" style="width:100%; border-radius:10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
+    <img src="demo/gif_demo/customer_gif_demo1.gif" alt="Header" style="width:100%; border-radius:10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
 </div>
 
 ## 📌 Overview  
@@ -20,21 +20,21 @@ Customer Personality Analysis helps businesses understand customer behavior, seg
 ### 🚀 **Admin Login**  
 This step demonstrates the login process for the Apache Airflow Admin panel.  
 
-![Apache Airflow Admin](demo/gif_assets/gif_demo2.gif)  
+![Apache Airflow Admin](demo/gif_demo/customer_gif_demo2.gif)  
 
 ---
 
 ### 📺 **Continuous Training Pipeline (CT)**  
 This DAG automates the continuous training of the model, ensuring it stays updated with new data.  
 
-![Airflow Continuous Training Dag](demo/gif_assets/gif_demo3.gif)  
+![Airflow Continuous Training Dag](demo/gif_demo/customer_gif_demo3.gif)  
 
 ---
 
 ### 📊 **Cluster Prediction DAG**  
 This step runs the clustering model to generate predictions.  
 
-![Cluster Prediction Dag](demo/gif_assets/gif_demo4.gif)  
+![Cluster Prediction Dag](demo/gif_demo/customer_gif_demo4.gif)  
 
 ---
 
@@ -44,7 +44,7 @@ The S3 bucket stores all generated outputs, including:
 - 📂 **Clustered Files**  
 - 🔍 **Artifacts**  
 
-![CT and Prediction Outputs](demo/gif_assets/gif_demo5.gif)  
+![CT and Prediction Outputs](demo/gif_demo/customer_gif_demo5.gif)  
 
 ## 💁️ Project Structure
 ```
@@ -56,7 +56,7 @@ Customer-Personality-Analysis/
 │
 |── demo/
 |   ├── project_full_demo.mp4         # Full Project Explaination
-│   └── gif_assets/                   # gif short demo
+│   └── gif_demo/                     # gif short demo
 | 
 ├── .github/
 │   └── workflows/
@@ -157,7 +157,7 @@ Customer-Personality-Analysis/
 > # Extract the installer
 > tar xzf ./actions-runner-linux-x64-2.322.0.tar.gz
 > 
-> # Configure the runner (replace <REPO_URL> and <RUNNER_TOKEN> with your repository URL and runner token)
+> # Configure the runner (replace <REPO_URL> and <RUNNER_TOKEN> with your repository URL and runner token) 
 > ./config.sh --url https://github.com/Rajatsingh64/customer_personality_analysis --token XYZ
 > 
 > # Start the runner
