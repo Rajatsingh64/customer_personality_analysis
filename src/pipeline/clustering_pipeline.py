@@ -79,7 +79,7 @@ def start_Cluster_prediction(input_file_path: str) -> str:
         # Predict cluster labels using the loaded model
         cluster_labels = model.predict(input_encoded_df)
         df["Cluster"] = cluster_labels
-        df["Cluster_Category"]= df["Cluster"].replace(to_replace={0 : "Moderate Spender" , 1:"Low Spender" , 2: "High Spender"})
+        df["Cluster_Category"]= df["Cluster"].replace(to_replace={0 : "Regular Shoppers" , 1:"Cautious Buyers" , 2: "Luxury Shoppers"})
 
         # Generate a unique filename for the Clustering file using the current datetime
         clustering_file_name = os.path.basename("clustered_customer.csv").replace(

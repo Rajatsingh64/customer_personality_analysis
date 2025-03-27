@@ -25,7 +25,7 @@ logging.info(f"Connected to MongoDB database")
 features_to_drop = [
     "ID", "Year_Birth", "Dt_Customer", "year_enroll",
     "AcceptedCmp5", "AcceptedCmp3", "AcceptedCmp4", "AcceptedCmp1", "AcceptedCmp2",
-    "Z_CostContact", "Complain", "Z_Revenue", "Response"
+    "Z_CostContact", "Complain", "Z_Revenue", "Response" ,"Generation"
 ]
 
 outliers_handling_features= ['Age' , 'Income','Income_to_Spending_Ratio' , "customer_spending"] #Important Numericals Features to be handled
