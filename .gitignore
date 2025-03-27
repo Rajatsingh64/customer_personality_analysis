@@ -175,4 +175,5 @@ test.ipynb
 test.py
 clustered_files/
 saved_models/
+.idea/
 
