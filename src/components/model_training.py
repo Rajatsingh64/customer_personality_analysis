@@ -106,12 +106,7 @@ class ModelTrainer:
             test_array = load_numpy_array_data(file_path=self.data_transformation_artifact.transformed_test_data_file_path)
 
             logging.info(f"Train the model")
-            #best_model = self.tune_model(X=train_array, no_clusters=10)
-            #if best_model is None:
-                #raise Exception("No suitable model was found during tuning. Please check the input data or parameters.")
-            
-            #manually increasing cluster 
-            best_model=KMeans(n_clusters=3, init="k-means++" , n_init=10 , random_state=42 )
+            best_model=KMeans(n_clusters=2, init="k-means++" , n_init=10 , random_state=42 )
             best_model.fit(main_array)
 
             train_labels = best_model.predict(train_array)

@@ -109,7 +109,7 @@ class ModelEvaluation:
             logging.info(f"Silhouette score for newly trained model: {current_model_score}")
 
             # If the new model does not outperform the production model, reject it.
-            if current_model_score <=previous_model_score:
+            if current_model_score <previous_model_score:
                 logging.info("The newly trained model does not outperform the current production model.")
                 raise Exception("Current trained model is not better than the previous model")
 
