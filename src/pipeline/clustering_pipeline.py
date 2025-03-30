@@ -48,8 +48,6 @@ def start_Cluster_prediction(input_file_path: str) -> str:
         # Handle outliers and reduce high numerical correlations
         logging.info("Processing data: handling outliers and numerical correlations")
         df[outliers_handling_features] = handling_outliers(df=df[outliers_handling_features])
-        
-        df_copy=df.copy() #copy of original dataset before preprocessing
         df = handle_num_correlations(df=df)
 
         # Load the transformer used during model training
@@ -80,8 +78,8 @@ def start_Cluster_prediction(input_file_path: str) -> str:
 
         # Predict cluster labels using the loaded model
         cluster_labels = model.predict(input_encoded_df)
-        df_copy["Cluster"] = cluster_labels #adding labels to original dataset
-        df_copy["Cluster_Category"]= df_copy["Cluster"].replace(to_replace={0 : "Low Spenders" , 1:"Moderate Spenders"})
+        df["Cluster"] = cluster_labels #adding labels to original dataset
+        df["Cluster_Category"]= df["Cluster"].replace(to_replace={0 : "Low Spender" , 1:"High Spender"})
 
         # Generate a unique filename for the Clustering file using the current datetime
         clustering_file_name = os.path.basename("clustered_customer.csv").replace(
@@ -90,7 +88,7 @@ def start_Cluster_prediction(input_file_path: str) -> str:
         clustering_file_path = os.path.join(Final_Output_DIR, clustering_file_name)
 
         # Save the Clustered data to a CSV file
-        df_copy.to_csv(clustering_file_path, index=False, header=True)
+        df.to_csv(clustering_file_path, index=False, header=True)
         logging.info(f"{'>'*20} Clustering Completed Successfully {'<'*20}")
         print(f'Clustered file >>>>>>>>>>>> {clustering_file_name}')
         
