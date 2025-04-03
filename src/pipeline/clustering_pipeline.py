@@ -4,26 +4,26 @@ from src.predictor import ModelResolver
 import pandas as pd
 import numpy as np
 from src.utils import load_object, handle_num_correlations, handling_outliers
-from src.config import outliers_handling_features
-import os, sys
+from src.config import outliers_handling_features, features_to_drop
+import os
+import sys
 from datetime import datetime
-from src.config import features_to_drop
-import warnings 
+import warnings
 warnings.filterwarnings("ignore")
 
-Final_Output_DIR = "clustered_files"
-
+FINAL_OUTPUT_DIR = "clustered_files"
 
 def start_Cluster_prediction(input_file_path: str) -> str:
     """
     Executes batch prediction on the provided input CSV file.
-    The function performs the following steps:
+
+    Steps:
       1. Reads the input file.
       2. Drops unnecessary features.
       3. Handles outliers and numerical correlations.
       4. Loads the trained transformer and model.
       5. Transforms the input data and predicts cluster labels.
-      6. Saves the prediction results to a CSV file in the prediction directory.
+      6. Saves the prediction results to a CSV file.
 
     Args:
         input_file_path (str): The file path of the input CSV file.
@@ -33,66 +33,68 @@ def start_Cluster_prediction(input_file_path: str) -> str:
     """
     try:
         logging.info(f"{'>'*20} Starting Cluster Prediction {'<'*20}")
-        os.makedirs(Final_Output_DIR, exist_ok=True)
+        os.makedirs(FINAL_OUTPUT_DIR, exist_ok=True)
 
-        logging.info("Creating ModelResolver object")
-        model_resolver = ModelResolver(model_registry="saved_models")
+        # Check if file exists
+        if not os.path.exists(input_file_path):
+            raise FileNotFoundError(f"Input file '{input_file_path}' not found.")
 
         logging.info(f"Reading input file: {input_file_path}")
         df = pd.read_csv(input_file_path)
 
-        # Remove unnecessary features based on configuration
+        if df.empty:
+            raise ValueError("The input file is empty.")
+
         logging.info(f"Dropping unnecessary features: {features_to_drop}")
         df.drop(features_to_drop, axis=1, inplace=True)
+        
+        df_copy = df.copy()  #making copy of original data for preprocessing and training
+        
+        logging.info("Handling outliers and numerical correlations")
+        if outliers_handling_features:
+            df_copy[outliers_handling_features] = handling_outliers(df=df_copy[outliers_handling_features])
+        
+        df_copy = handle_num_correlations(df=df_copy)
 
-        # Handle outliers and reduce high numerical correlations
-        logging.info("Processing data: handling outliers and numerical correlations")
-        df[outliers_handling_features] = handling_outliers(df=df[outliers_handling_features])
-        df = handle_num_correlations(df=df)
-
-        # Load the transformer used during model training
+        # Load transformer
         logging.info("Loading transformer for data transformation")
-        transformer = load_object(file_path=model_resolver.get_latest_transformer_path())
+        transformer_path = ModelResolver(model_registry="saved_models").get_latest_transformer_path()
+        logging.info(f"Transformer Path: {transformer_path}")
+        transformer = load_object(file_path=transformer_path)
 
-        # Retrieve input feature names used during training
+        # Feature transformation
         input_feature_names = list(transformer.feature_names_in_)
-        logging.info(f"Transforming input features: {input_feature_names}")
-
-        # Transform the data using the transformer and create a DataFrame of encoded features
-        transformed_array = transformer.transform(df[input_feature_names])
+        transformed_array = transformer.transform(df_copy[input_feature_names])
         transformed_df = pd.DataFrame(
-            transformed_array, 
-            columns=transformer.get_feature_names_out(input_feature_names)
+            transformed_array, columns=transformer.get_feature_names_out(input_feature_names)
         )
 
-        # Combine the transformed features with the remaining original features
         input_encoded_df = pd.concat(
-            [df.drop(columns=input_feature_names), 
-             transformed_df],
-            axis=1
+            [df_copy.drop(columns=input_feature_names), transformed_df], axis=1
         )
 
-        # Load the best saved model for Clustering
+        # Load clustering model
         logging.info("Loading the best model for Clustering")
-        model = load_object(file_path=model_resolver.get_latest_model_path())
+        model_path = ModelResolver(model_registry="saved_models").get_latest_model_path()
+        logging.info(f"Model Path: {model_path}")
+        model = load_object(file_path=model_path)
 
-        # Predict cluster labels using the loaded model
+        # Predict clusters
         cluster_labels = model.predict(input_encoded_df)
-        df["Cluster"] = cluster_labels #adding labels to original dataset
-        df["Cluster_Category"]= df["Cluster"].replace(to_replace={0 : "Low Spender" , 1:"High Spender"})
+        df["Cluster"] = cluster_labels
+        df["Cluster_Category"] = df["Cluster"].replace({0: "Low Spender", 1: "High Spender"})
 
-        # Generate a unique filename for the Clustering file using the current datetime
-        clustering_file_name = os.path.basename("clustered_customer.csv").replace(
-            ".csv", f"_{datetime.now().strftime('%m%d%Y__%H%M%S')}.csv"
-        )
-        clustering_file_path = os.path.join(Final_Output_DIR, clustering_file_name)
+        # Save results
+        timestamp = datetime.now().strftime('%m%d%Y__%H%M%S')
+        clustering_file_name = f"clustered_customer_{timestamp}.csv"
+        clustering_file_path = os.path.join(FINAL_OUTPUT_DIR, clustering_file_name)
 
-        # Save the Clustered data to a CSV file
-        df.to_csv(clustering_file_path, index=False, header=True)
+        df.to_csv(clustering_file_path, index=False, header=True) # Saving Predictions with Original Features and Labels
         logging.info(f"{'>'*20} Clustering Completed Successfully {'<'*20}")
-        print(f'Clustered file >>>>>>>>>>>> {clustering_file_name}')
+        print(f'Clustered file saved as: {clustering_file_name}')
         
         return clustering_file_path
 
     except Exception as e:
+        logging.error(f"Error in start_Cluster_prediction: {e}")
         raise SrcException(e, sys)
