@@ -82,8 +82,11 @@ def start_Cluster_prediction(input_file_path: str) -> str:
         # Predict clusters
         cluster_labels = model.predict(input_encoded_df)
         df["Cluster"] = cluster_labels
-        df["Cluster_Category"] = df["Cluster"].replace({0: "Low Spender", 1: "High Spender"})
 
+        # Assign names to clusters based on analysis in notebook\Preprocessing & Model_training.ipynb file
+        # Used random seeding during model training to ensure consistent results matching the notebook analysis
+        df["Cluster_Category"] = df["Cluster"].replace({0: "Low Spender", 1: "High Spender"}) 
+        
         # Save results
         timestamp = datetime.now().strftime('%m%d%Y__%H%M%S')
         clustering_file_name = f"clustered_customer_{timestamp}.csv"
