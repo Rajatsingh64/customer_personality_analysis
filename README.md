@@ -44,61 +44,61 @@ The S3 bucket stores all generated outputs, including:
 ```
 Customer-Personality-Analysis/
 │
-├── .dockerignore                     # 🚫 Ignore files for Docker
-├── .env                              # 🔑 Environment variables
-├── .gitignore                        # 🚫 Ignore files for Git
+├── .dockerignore                              # 🚫 Ignore files for Docker
+├── .env                                       # 🔑 Environment variables
+├── .gitignore                                 # 🚫 Ignore files for Git
 │
 |── demo/
-|   ├── project_full_demo.mp4         # Full Project Explaination
-│   └── gif_demo/                     # gif short demo
+|   ├── project_full_demo.mp4                  # Full Project Explaination
+│   └── gif_demo/                              # gif short demo
 | 
 ├── .github/
 │   └── workflows/
-│       └── main.yaml                 # ⚙️ GitHub Actions CI/CD pipeline
+│       └── main.yaml                          # ⚙️ GitHub Actions CI/CD pipeline
 │
-├── airflow/                          # 💨 Apache Airflow DAGs
-│   └── dags/                         # 📅 Workflow DAGs
-│       ├── clustering_pipeline.py# 🔍 Airflow DAG for clustering
-│       └── training_pipeline.py      # 🎯 Airflow DAG for model training
+├── airflow/                                   # 💨 Apache Airflow DAGs
+│   └── dags/                                  # 📅 Workflow DAGs
+│       ├── clustering_pipeline.py             # 🔍 Airflow DAG for clustering
+│       └── training_pipeline.py               # 🎯 Airflow DAG for model training
 │
-├── artifact/                        # 🐂 Contains all intermediate and final outputs
-├── clustered_files/                  # 📂 Clustered processed files
-├── data_dump.py                      # 🛋️ Dumps data into MongoDB Atlas
-├── docker-compose.yml                # 🔧 Docker Compose for multi-container setup
-├── Dockerfile                        # 💪 Docker image setup
+├── artifact/                                  # 🐂 Contains all intermediate and final outputs
+├── clustered_files/                           # 📂 Clustered processed files
+├── data_dump.py                               # 🛋️ Dumps data into MongoDB Atlas
+├── docker-compose.yml                         # 🔧 Docker Compose for multi-container setup
+├── Dockerfile                                 # 💪 Docker image setup
 │
-├── LICENSE                           # 📚 MIT License file
-├── main.py                           # 🚀 Entry point for training and predictions
-├── notebook/                         # 📚 Jupyter notebooks
+├── LICENSE                                    # 📚 MIT License file
+├── main.py                                    # 🚀 Entry point for training and predictions
+├── notebook/                                  # 📚 Jupyter notebooks
 │   ├── EDA & Feature_Engineering.ipynb        # 🔄 Exploratory Data Analysis
 │   ├── Preprocessing & Model_training.ipynb   # 🎓 Model training steps
 │
-├── README.md                         # 📖 Project documentation
-├── requirements.txt                  # 📌 Dependencies for the project
-├── saved_models/                     # 🎯 Production-ready models and transformers
-├── setup.py                          # ⚙️ Package setup for `src`
+├── README.md                                  # 📖 Project documentation
+├── requirements.txt                           # 📌 Dependencies for the project
+├── saved_models/                              # 🎯 Production-ready models and transformers
+├── setup.py                                   # ⚙️ Package setup for `src`
 │
 ├── src/
-│   ├── components/                   # 🏢 Core pipeline components
-│   │   ├── data_ingestion.py         # 📅 Handles data collection
-│   │   ├── data_transformation.py    # 🔄 Prepares data for training
-│   │   ├── data_validation.py        # ✅ Validates raw data
-│   │   ├── model_evaluation.py       # 📊 Evaluates the model
-│   │   ├── model_pusher.py           # 🚀 Pushes the trained model to deployment
-│   │   ├── model_training.py         # 🎓 Trains the machine learning model
+│   ├── components/                            # 🏢 Core pipeline components
+│   │   ├── data_ingestion.py                  # 📅 Handles data collection
+│   │   ├── data_transformation.py             # 🔄 Prepares data for training
+│   │   ├── data_validation.py                 # ✅ Validates raw data
+│   │   ├── model_evaluation.py                # 📊 Evaluates the model
+│   │   ├── model_pusher.py                    # 🚀 Pushes the trained model to deployment
+│   │   ├── model_training.py                  # 🎓 Trains the machine learning model
 │   │
-│   ├── config.py                     # ⚙️ Configuration management and environment variables
-│   ├── entity/                       # 📆 Data structures for pipeline
-│   │   ├── artifact_entity.py        # 🐂 Artifacts generated by pipeline stages
-│   │   └── config_entity.py          # ⚙️ Configuration-related entities
+│   ├── config.py                              # ⚙️ Configuration management and environment variables
+│   ├── entity/                                # 📆 Data structures for pipeline
+│   │   ├── artifact_entity.py                 # 🐂 Artifacts generated by pipeline stages
+│   │   └── config_entity.py                   # ⚙️ Configuration-related entities
 │   │
-│   ├── exceptions.py                 # ❗ Custom exception handling
-│   ├── logger.py                     # 💜 Logging setup
-│   ├── pipeline/                     # 🔄 Pipeline automation
-│   │   ├── clustering_pipeline.py    # 🔍 Handles clustering predictions
-│   │   └── training_pipeline.py      # 🎯 Automates training workflow
+│   ├── exceptions.py                          # ❗ Custom exception handling
+│   ├── logger.py                              # 💜 Logging setup
+│   ├── pipeline/                              # 🔄 Pipeline automation
+│   │   ├── clustering_pipeline.py             # 🔍 Handles clustering predictions
+│   │   └── training_pipeline.py               # 🎯 Automates training workflow
 │   │
-│   └── utils.py                      # 🛠️ Utility functions
+│   └── utils.py                               # 🛠️ Utility functions
 ```
 <h2 align="">Tools and Technologies Used</h2>
 <p align="center">
