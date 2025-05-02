@@ -16,12 +16,6 @@ Customer Personality Analysis helps businesses understand customer behavior, seg
 
 
 ## 🔹 Apache Airflow Workflow Overview
-
-### 🚀 **Admin Login**  
-This step demonstrates the login process for the Apache Airflow Admin panel.  
-
-![Apache Airflow Admin](demo/gif_demo/customer_gif_demo2.gif)  
-
 ---
 
 ### 📺 **Continuous Training Pipeline (CT)**  
